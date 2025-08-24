@@ -3,749 +3,828 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comparativo Ingeniería de Sistemas - UPC vs Universidad del Norte</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Comparación Ingeniería de Sistemas - UPC vs Universidad del Norte</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slide {
+            background: white;
+            margin: 40px 0;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .slide-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            border-bottom: 4px solid #3498db;
+            padding-bottom: 20px;
+        }
+
+        .slide-subtitle {
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 25px;
+            color: #34495e;
+        }
+
+        .participants {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .participant {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            color: #2c3e50;
+            border-left: 4px solid #3498db;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .university-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            border-top: 5px solid #3498db;
+        }
+
+        .university-section.upc {
+            border-top-color: #e74c3c;
+        }
+
+        .university-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .semester-comparison {
+            margin: 40px 0;
+        }
+
+        .semester-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .courses-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .courses-table th {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .courses-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .courses-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .credits {
+            font-weight: 600;
+            color: #e74c3c;
+            text-align: center;
+        }
+
+        .profile-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .profile-list li {
+            background: white;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .profile-list li::before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .info-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border-top: 4px solid #3498db;
+        }
+
+        .info-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .info-card p {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .total-credits {
+            background: #2c3e50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: 600;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 20px;
+                margin: 20px 0;
+            }
+
+            .slide-title {
+                font-size: 2rem;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .participants {
+                grid-template-columns: 1fr;
+            }
+
+            .courses-table {
+                font-size: 0.9rem;
+            }
+
+            .courses-table th,
+            .courses-table td {
+                padding: 8px;
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .slide-title {
+                font-size: 3rem;
+            }
+
+            .slide {
+                padding: 60px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Comparativo de Ingeniería de Sistemas</h1>
-            <p class="hero-subtitle">Universidad Popular del Cesar vs Universidad del Norte</p>
-            <div class="students-grid">
-                <div class="student-card">Zharay Cabana</div>
-                <div class="student-card">Sebastian Freyles</div>
-                <div class="student-card">Carina Valera</div>
-                <div class="student-card">Jorge Carrillo</div>
-                <div class="student-card">Laura Daza</div>
-            </div>
-        </div>
-        <div class="hero-decoration"></div>
-    </header>
+    <div class="container">
+        <!-- Slide 1: Portada -->
+        <section class="slide">
+            <h1 class="slide-title">Comparación de Ingeniería de Sistemas</h1>
+            <h2 class="slide-subtitle">Universidad Popular del Cesar vs Universidad del Norte</h2>
+            <h3 class="slide-subtitle" style="font-size: 1.4rem; margin-top: 40px;">Semestres 5 a 8</h3>
 
-    <main class="main-content">
-        <!-- Sección 1: Información General -->
-        <section class="info-section">
-            <div class="container">
-                <h2 class="section-title">Información General</h2>
-                <div class="info-grid">
-                    <div class="info-card upc-card">
-                        <h3>Universidad Popular del Cesar</h3>
-                        <div class="info-item">
-                            <strong>Localización:</strong> Valledupar, Cesar
-                        </div>
-                        <div class="info-item">
-                            <strong>Área:</strong> Región Caribe
-                        </div>
-                        <div class="info-item">
-                            <strong>Programa:</strong> Ingeniería de Sistemas
-                        </div>
-                        <div class="info-item">
-                            <strong>Modalidad:</strong> Presencial
-                        </div>
+            <div class="participants">
+                <div class="participant">Zharay Cabana</div>
+                <div class="participant">Sebastián Freyles</div>
+                <div class="participant">Carina Valera</div>
+                <div class="participant">Jorge Carrillo</div>
+                <div class="participant">Laura Dazate</div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Información General -->
+        <section class="slide">
+            <h2 class="slide-title">Información General</h2>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Localización UPC</h3>
+                    <p>Valledupar, Cesar, Colombia</p>
+                </div>
+                <div class="info-card">
+                    <h3>Localización Universidad del Norte</h3>
+                    <p>Barranquilla, Atlántico, Colombia</p>
+                </div>
+                <div class="info-card">
+                    <h3>Área UPC</h3>
+                    <p>Información no proporcionada</p>
+                </div>
+                <div class="info-card">
+                    <h3>Área Universidad del Norte</h3>
+                    <p>Información no proporcionada</p>
+                </div>
+                <div class="info-card">
+                    <h3>Valor Matrícula UPC</h3>
+                    <p>Información no proporcionada</p>
+                </div>
+                <div class="info-card">
+                    <h3>Valor Matrícula Universidad del Norte</h3>
+                    <p>Información no proporcionada</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Semestres 1-4 -->
+        <section class="slide">
+            <h2 class="slide-title">Comparativo Semestres 1 a 4</h2>
+
+            <!-- Semestre 1 -->
+            <div class="semester-comparison">
+                <h3 class="semester-title">Semestre 1</h3>
+                <div class="comparison-grid">
+                    <div class="university-section">
+                        <h4 class="university-title">Universidad del Norte</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Competencias Com I</td><td class="credits">3</td></tr>
+                                <tr><td>Introd. a la Ing. de Sistemas</td><td class="credits">3</td></tr>
+                                <tr><td>Cálculo I</td><td class="credits">4</td></tr>
+                                <tr><td>Algoritmia y Programación I</td><td class="credits">3</td></tr>
+                                <tr><td>Exigencia de Idiomas I</td><td class="credits">2</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 15 créditos</div>
                     </div>
-                    <div class="info-card uninorte-card">
-                        <h3>Universidad del Norte</h3>
-                        <div class="info-item">
-                            <strong>Localización:</strong> Barranquilla, Atlántico
-                        </div>
-                        <div class="info-item">
-                            <strong>Área:</strong> Región Caribe
-                        </div>
-                        <div class="info-item">
-                            <strong>Programa:</strong> Ingeniería de Sistemas
-                        </div>
-                        <div class="info-item">
-                            <strong>Modalidad:</strong> Presencial
-                        </div>
+
+                    <div class="university-section upc">
+                        <h4 class="university-title">Universidad Popular del Cesar</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Actividad Deportiva</td><td class="credits">1</td></tr>
+                                <tr><td>Álgebra Lineal</td><td class="credits">3</td></tr>
+                                <tr><td>Algoritmos y Fund. de Programación</td><td class="credits">3</td></tr>
+                                <tr><td>Cálculo Diferencial</td><td class="credits">3</td></tr>
+                                <tr><td>Cátedra Upecista</td><td class="credits">1</td></tr>
+                                <tr><td>Comunicación Oral y Escrita I</td><td class="credits">2</td></tr>
+                                <tr><td>Introducción a la Ing. de Sistemas</td><td class="credits">2</td></tr>
+                                <tr><td>Lengua Extranjera - Gramática</td><td class="credits">2</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 17 créditos</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semestre 2 -->
+            <div class="semester-comparison">
+                <h3 class="semester-title">Semestre 2</h3>
+                <div class="comparison-grid">
+                    <div class="university-section">
+                        <h4 class="university-title">Universidad del Norte</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Competencias Comunicativas II</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva en Historia</td><td class="credits">2</td></tr>
+                                <tr><td>Algoritmia y Programación II</td><td class="credits">3</td></tr>
+                                <tr><td>Cálculo II</td><td class="credits">4</td></tr>
+                                <tr><td>Física Mecánica</td><td class="credits">3</td></tr>
+                                <tr><td>Exigencia de Idiomas II</td><td class="credits">2</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 17 créditos</div>
+                    </div>
+
+                    <div class="university-section upc">
+                        <h4 class="university-title">Universidad Popular del Cesar</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Cálculo Integral</td><td class="credits">3</td></tr>
+                                <tr><td>Comunicación Oral y Escrita II</td><td class="credits">2</td></tr>
+                                <tr><td>Humanidades I</td><td class="credits">2</td></tr>
+                                <tr><td>Lengua Extranjera - Lectura</td><td class="credits">2</td></tr>
+                                <tr><td>Matemáticas Discretas</td><td class="credits">3</td></tr>
+                                <tr><td>Mecánica</td><td class="credits">3</td></tr>
+                                <tr><td>Programación de Computadores I</td><td class="credits">3</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 18 créditos</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección 2: Semestres 1-4 -->
-        <section class="semester-section">
-            <div class="container">
-                <h2 class="section-title">Comparativo Semestres 1-4</h2>
+        <!-- Slide 4: Semestres 3-4 -->
+        <section class="slide">
+            <h2 class="slide-title">Comparativo Semestres 3 a 4</h2>
 
-                <div class="semester-comparison">
-                    <h3 class="semester-title">Semestre 1</h3>
-                    <div class="comparison-grid">
-                        <div class="university-column upc-column">
-                            <h4>UPC</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Actividad Deportiva</span>
-                                    <span class="credits">1</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Álgebra Lineal</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Algoritmos y Fundamentos de Programación</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Cálculo Diferencial</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Cátedra Upecista</span>
-                                    <span class="credits">1</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Comunicación Oral y Escrita I</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Introducción a la Ingeniería de Sistemas</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Lengua Extranjera - Gramática</span>
-                                    <span class="credits">2</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 17 créditos</div>
-                        </div>
+            <!-- Semestre 3 -->
+            <div class="semester-comparison">
+                <h3 class="semester-title">Semestre 3</h3>
+                <div class="comparison-grid">
+                    <div class="university-section">
+                        <h4 class="university-title">Universidad del Norte</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Estructura de Datos I</td><td class="credits">3</td></tr>
+                                <tr><td>Programación Orientada Objeto</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva Humanidades</td><td class="credits">2</td></tr>
+                                <tr><td>Física Calor Ondas</td><td class="credits">3</td></tr>
+                                <tr><td>Cálculo III</td><td class="credits">4</td></tr>
+                                <tr><td>Exigencia de Idiomas III</td><td class="credits">2</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 17 créditos</div>
+                    </div>
 
-                        <div class="university-column uninorte-column">
-                            <h4>Universidad del Norte</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Competencias Comunicativas I</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Introducción a la Ing. de Sistemas</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Cálculo I</span>
-                                    <span class="credits">4</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Algoritmia y Programación I</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Exigencia de Idiomas I</span>
-                                    <span class="credits">2</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 15 créditos</div>
-                        </div>
+                    <div class="university-section upc">
+                        <h4 class="university-title">Universidad Popular del Cesar</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Actividad Cultural</td><td class="credits">1</td></tr>
+                                <tr><td>Cálculo Multivariable</td><td class="credits">3</td></tr>
+                                <tr><td>Estructura de Datos</td><td class="credits">3</td></tr>
+                                <tr><td>Humanidades II</td><td class="credits">2</td></tr>
+                                <tr><td>Lengua Extranjera - Escritura</td><td class="credits">2</td></tr>
+                                <tr><td>Ondas</td><td class="credits">3</td></tr>
+                                <tr><td>Programación de Computadores II</td><td class="credits">3</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 17 créditos</div>
                     </div>
                 </div>
+            </div>
 
-                <div class="semester-comparison">
-                    <h3 class="semester-title">Semestre 2</h3>
-                    <div class="comparison-grid">
-                        <div class="university-column upc-column">
-                            <h4>UPC</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Cálculo Integral</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Comunicación Oral y Escrita II</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Humanidades I</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Lengua Extranjera - Lectura</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Matemáticas Discretas</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Mecánica</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Programación de Computadores I</span>
-                                    <span class="credits">3</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 18 créditos</div>
-                        </div>
-
-                        <div class="university-column uninorte-column">
-                            <h4>Universidad del Norte</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Competencias Comunicativas II</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva en Historia</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Algoritmia y Programación II</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Cálculo II</span>
-                                    <span class="credits">4</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Física Mecánica</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Exigencia de Idiomas II</span>
-                                    <span class="credits">2</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 17 créditos</div>
-                        </div>
+            <!-- Semestre 4 -->
+            <div class="semester-comparison">
+                <h3 class="semester-title">Semestre 4</h3>
+                <div class="comparison-grid">
+                    <div class="university-section">
+                        <h4 class="university-title">Universidad del Norte</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Estructuras de Datos II</td><td class="credits">3</td></tr>
+                                <tr><td>Ecuaciones Diferenciales</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva Ciencias de la Vida</td><td class="credits">2</td></tr>
+                                <tr><td>Matemáticas Discretas</td><td class="credits">3</td></tr>
+                                <tr><td>Física Electricidad</td><td class="credits">3</td></tr>
+                                <tr><td>Exigencia de Idiomas IV</td><td class="credits">2</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 16 créditos</div>
                     </div>
-                </div>
 
-                <div class="semester-comparison">
-                    <h3 class="semester-title">Semestre 3</h3>
-                    <div class="comparison-grid">
-                        <div class="university-column upc-column">
-                            <h4>UPC</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Actividad Cultural</span>
-                                    <span class="credits">1</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Cálculo Multivariable</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Estructura de Datos</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Humanidades II</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Lengua Extranjera - Escritura</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Ondas</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Programación de Computadores II</span>
-                                    <span class="credits">3</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 17 créditos</div>
-                        </div>
-
-                        <div class="university-column uninorte-column">
-                            <h4>Universidad del Norte</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Estructura de Datos I</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Programación Orientada a Objetos</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva Humanidades</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Física Calor Ondas</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Cálculo III</span>
-                                    <span class="credits">4</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Exigencia de Idiomas III</span>
-                                    <span class="credits">2</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 17 créditos</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="semester-comparison">
-                    <h3 class="semester-title">Semestre 4</h3>
-                    <div class="comparison-grid">
-                        <div class="university-column upc-column">
-                            <h4>UPC</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Base de Datos</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Ecuaciones Diferenciales</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electromagnetismo</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Estadística Descriptiva e Inferencial</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Lengua Extranjera - Conversación</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Programación de Computadores III</span>
-                                    <span class="credits">3</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 17 créditos</div>
-                        </div>
-
-                        <div class="university-column uninorte-column">
-                            <h4>Universidad del Norte</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Estructuras de Datos II</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Ecuaciones Diferenciales</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva Ciencias de la Vida</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Matemáticas Discretas</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Física Electricidad</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Exigencia de Idiomas IV</span>
-                                    <span class="credits">2</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 16 créditos</div>
-                        </div>
+                    <div class="university-section upc">
+                        <h4 class="university-title">Universidad Popular del Cesar</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Base de Datos</td><td class="credits">3</td></tr>
+                                <tr><td>Ecuaciones Diferenciales</td><td class="credits">3</td></tr>
+                                <tr><td>Electromagnetismo</td><td class="credits">3</td></tr>
+                                <tr><td>Estadística Descriptiva e Inferencial</td><td class="credits">3</td></tr>
+                                <tr><td>Lengua Extranjera Conversación</td><td class="credits">2</td></tr>
+                                <tr><td>Programación de Computadores III</td><td class="credits">3</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 17 créditos</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección 3: Semestres 5-8 -->
-        <section class="semester-section">
-            <div class="container">
-                <h2 class="section-title">Comparativo Semestres 5-8</h2>
+        <!-- Slide 5: Semestres 5-6 -->
+        <section class="slide">
+            <h2 class="slide-title">Comparativo Semestres 5 a 6</h2>
 
-                <div class="semester-comparison">
-                    <h3 class="semester-title">Semestre 5</h3>
-                    <div class="comparison-grid">
-                        <div class="university-column upc-column">
-                            <h4>UPC</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Metodología de la Investigación</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Análisis Numérico</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Arquitectura de Computadores</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Ingeniería de Software I</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Investigación de Operaciones</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Programación Web</span>
-                                    <span class="credits">3</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 17 créditos</div>
-                        </div>
+            <!-- Semestre 5 -->
+            <div class="semester-comparison">
+                <h3 class="semester-title">Semestre 5</h3>
+                <div class="comparison-grid">
+                    <div class="university-section">
+                        <h4 class="university-title">Universidad del Norte</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>EST 7042 Análisis de Datos en Ing. I</td><td class="credits">4</td></tr>
+                                <tr><td>IST 4310 Algoritmia y Complejidad</td><td class="credits">2</td></tr>
+                                <tr><td>IST 4330 Estructuras Discretas</td><td class="credits">3</td></tr>
+                                <tr><td>IST 7072 Diseño Digital</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva en Cs. de la Vida</td><td class="credits">3</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 15 créditos</div>
+                    </div>
 
-                        <div class="university-column uninorte-column">
-                            <h4>Universidad del Norte</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Análisis de Datos en Ing. I</span>
-                                    <span class="credits">4</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Algoritmia y Complejidad</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Estructuras Discretas</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Diseño Digital</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva en Cs. de la Vida</span>
-                                    <span class="credits">3</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 15 créditos</div>
-                        </div>
+                    <div class="university-section upc">
+                        <h4 class="university-title">Universidad Popular del Cesar</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Metodología de la Investigación</td><td class="credits">2</td></tr>
+                                <tr><td>Análisis Numérico</td><td class="credits">3</td></tr>
+                                <tr><td>Arquitectura de Computadores</td><td class="credits">3</td></tr>
+                                <tr><td>Ingeniería de Software I</td><td class="credits">3</td></tr>
+                                <tr><td>Investigación de Operaciones</td><td class="credits">3</td></tr>
+                                <tr><td>Programación Web</td><td class="credits">3</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 17 créditos</div>
                     </div>
                 </div>
+            </div>
 
-                <div class="semester-comparison">
-                    <h3 class="semester-title">Semestre 6</h3>
-                    <div class="comparison-grid">
-                        <div class="university-column upc-column">
-                            <h4>UPC</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Seminario de Investigación</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Cátedra Negocios Internacionales</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Fundamentos de Administración</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Ingeniería de Software II</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Modelos y Simulación</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Programación Móvil</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Sistemas Operativos</span>
-                                    <span class="credits">3</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 18 créditos</div>
-                        </div>
-
-                        <div class="university-column uninorte-column">
-                            <h4>Universidad del Norte</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Soluciones Computacionales</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Bases de Datos</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Redes de Computación</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Estructura del Computador I</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva Profesional</span>
-                                    <span class="credits">3</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 15 créditos</div>
-                        </div>
+            <!-- Semestre 6 -->
+            <div class="semester-comparison">
+                <h3 class="semester-title">Semestre 6</h3>
+                <div class="comparison-grid">
+                    <div class="university-section">
+                        <h4 class="university-title">Universidad del Norte</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>IST 4360 Soluciones Computacionales</td><td class="credits">3</td></tr>
+                                <tr><td>IST 7111 Bases de Datos</td><td class="credits">3</td></tr>
+                                <tr><td>IST 7191 Redes de Computación</td><td class="credits">3</td></tr>
+                                <tr><td>IST 4012 Estructura del Computador I</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva Profesional</td><td class="credits">3</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 15 créditos</div>
                     </div>
-                </div>
 
-                <div class="semester-comparison">
-                    <h3 class="semester-title">Semestre 7</h3>
-                    <div class="comparison-grid">
-                        <div class="university-column upc-column">
-                            <h4>UPC</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Computación Gráfica</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva Cs. Admin/Econ/Contables</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Ingeniería Económica</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Inteligencia Artificial</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Redes y Comunicaciones</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Sistemas de Información</span>
-                                    <span class="credits">3</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 17 créditos</div>
-                        </div>
-
-                        <div class="university-column uninorte-column">
-                            <h4>Universidad del Norte</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Optimización</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Diseño de Software I</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Sistemas Operativos</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Estructura del Computador II</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva Ética</span>
-                                    <span class="credits">3</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 15 créditos</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="semester-comparison">
-                    <h3 class="semester-title">Semestre 8</h3>
-                    <div class="comparison-grid">
-                        <div class="university-column upc-column">
-                            <h4>UPC</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Base de Datos Avanzadas</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva de Profundización I</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva Gestión Ambiental</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Formulación y Evaluación de Proyectos</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Gestión de Proyectos TI</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Seguridad Informática</span>
-                                    <span class="credits">3</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 17 créditos</div>
-                        </div>
-
-                        <div class="university-column uninorte-column">
-                            <h4>Universidad del Norte</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Diseño de Software II</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Compiladores</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva Profesional II</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva en Redes</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva en Ciencias de la Computación</span>
-                                    <span class="credits">3</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 15 créditos</div>
-                        </div>
+                    <div class="university-section upc">
+                        <h4 class="university-title">Universidad Popular del Cesar</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Seminario de Investigación</td><td class="credits">2</td></tr>
+                                <tr><td>Cátedra Negocios Internacionales</td><td class="credits">2</td></tr>
+                                <tr><td>Fundamentos de Administración</td><td class="credits">2</td></tr>
+                                <tr><td>Ingeniería de Software II</td><td class="credits">3</td></tr>
+                                <tr><td>Modelos y Simulación</td><td class="credits">3</td></tr>
+                                <tr><td>Programación Móvil</td><td class="credits">3</td></tr>
+                                <tr><td>Sistemas Operativos</td><td class="credits">3</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 18 créditos</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección 4: Semestre 9 y Perfiles -->
-        <section class="semester-section">
-            <div class="container">
-                <h2 class="section-title">Semestre 9 y Perfiles Profesionales</h2>
+        <!-- Slide 6: Semestres 7-8 -->
+        <section class="slide">
+            <h2 class="slide-title">Comparativo Semestres 7 a 8</h2>
 
-                <div class="semester-comparison">
-                    <h3 class="semester-title">Semestre 9</h3>
-                    <div class="comparison-grid">
-                        <div class="university-column upc-column">
-                            <h4>UPC</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Legislación de Sistemas</span>
-                                    <span class="credits">2</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Auditoría de Sistemas</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva Básica de Ingeniería</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva de Profundización II</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva de Profundización III</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Proyecto de Grado I</span>
-                                    <span class="credits">3</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 17 créditos</div>
-                        </div>
+            <!-- Semestre 7 -->
+            <div class="semester-comparison">
+                <h3 class="semester-title">Semestre 7</h3>
+                <div class="comparison-grid">
+                    <div class="university-section">
+                        <h4 class="university-title">Universidad del Norte</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>IST 7420 Optimización</td><td class="credits">3</td></tr>
+                                <tr><td>IST 7121 Diseño de Software I</td><td class="credits">3</td></tr>
+                                <tr><td>IST 7081 Sistemas Operativos</td><td class="credits">3</td></tr>
+                                <tr><td>IST 7102 Estructura del Computador II</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva Ética</td><td class="credits">3</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 15 créditos</div>
+                    </div>
 
-                        <div class="university-column uninorte-column">
-                            <h4>Universidad del Norte</h4>
-                            <div class="subject-list">
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva en Filosofía</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electiva Profesional II</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electivas Ciencias de la Computación</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electivas Gestión Informática</span>
-                                    <span class="credits">3</span>
-                                </div>
-                                <div class="subject-item">
-                                    <span class="subject-name">Electivas Gestión Complementaria I</span>
-                                    <span class="credits">3</span>
-                                </div>
-                            </div>
-                            <div class="total-credits">Total: 15 créditos</div>
-                        </div>
+                    <div class="university-section upc">
+                        <h4 class="university-title">Universidad Popular del Cesar</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Computación Gráfica</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva Cs. Admin/Econ/Contables</td><td class="credits">2</td></tr>
+                                <tr><td>Ingeniería Económica</td><td class="credits">3</td></tr>
+                                <tr><td>Inteligencia Artificial</td><td class="credits">3</td></tr>
+                                <tr><td>Redes y Comunicaciones</td><td class="credits">3</td></tr>
+                                <tr><td>Sistemas de Información</td><td class="credits">3</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 17 créditos</div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Perfiles Profesionales -->
-                <div class="profiles-section">
-                    <h3 class="section-title">Perfiles Profesionales</h3>
-
-                    <div class="profile-card upc-profile">
-                        <h4>Perfil Profesional UPC</h4>
-                        <p class="profile-description">
-                            El Ingeniero de Sistemas egresado de la Universidad Popular del Cesar será un profesional
-                            integral que estará en la capacidad de desarrollar soluciones de software aplicando las
-                            ciencias básicas y de ingeniería, modelos basados en métodos analíticos, computacionales
-                            y experimentales para la resolución de problemas, con capacidad de gestión, emprendimiento
-                            y pensamiento crítico.
-                        </p>
-
-                        <div class="learning-outcomes">
-                            <h5>Resultados de Aprendizaje:</h5>
-                            <div class="outcome-item">
-                                <strong>1.</strong> INTEGRA las ciencias básicas y las ciencias básicas de la ingeniería
-                                para la resolución de problemas reales, promoviendo el desarrollo sostenible.
-                            </div>
-                            <div class="outcome-item">
-                                <strong>2.</strong> DESARROLLA productos de software que resuelven problemas reales,
-                                aplicando buenas prácticas y estándares de calidad.
-                            </div>
-                            <div class="outcome-item">
-                                <strong>3.</strong> CONSTRUYE modelos computacionales basados en métodos analíticos
-                                y experimentales para el desarrollo de soluciones de software.
-                            </div>
-                            <div class="outcome-item">
-                                <strong>4.</strong> GESTIONA proyectos de Tecnologías de la Información, para
-                                satisfacer las necesidades del entorno global.
-                            </div>
-                            <div class="outcome-item">
-                                <strong>5.</strong> EMPRENDE aplicando ciencia, tecnología e innovación desde su
-                                profesión, con pensamiento crítico, responsabilidad ética, liderazgo y colaboración.
-                            </div>
-                        </div>
+            <!-- Semestre 8 -->
+            <div class="semester-comparison">
+                <h3 class="semester-title">Semestre 8</h3>
+                <div class="comparison-grid">
+                    <div class="university-section">
+                        <h4 class="university-title">Universidad del Norte</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>IST 7122 Diseño de Software II</td><td class="credits">3</td></tr>
+                                <tr><td>IST 7410 Compiladores</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva Profesional II</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva en Redes</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva en Ciencias de la Computación</td><td class="credits">3</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 15 créditos</div>
                     </div>
 
-                    <div class="profile-card uninorte-profile">
-                        <h4>Perfil Profesional Universidad del Norte</h4>
-                        <p class="profile-description">
-                            <em>Información pendiente por proporcionar</em>
-                        </p>
+                    <div class="university-section upc">
+                        <h4 class="university-title">Universidad Popular del Cesar</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Base de Datos Avanzadas</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva de Profundización I</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva Gestión Ambiental</td><td class="credits">2</td></tr>
+                                <tr><td>Formulación y Evaluación de Proyectos</td><td class="credits">3</td></tr>
+                                <tr><td>Gestión de Proyectos TI</td><td class="credits">3</td></tr>
+                                <tr><td>Seguridad Informática</td><td class="credits">3</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 17 créditos</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección 5: Semestre 10 -->
-        <section class="semester-section">
-            <div class="container">
-                <h2 class="section-title">Semestre 10</h2>
-                <div class="info-pending">
-                    <p><em>Información pendiente por proporcionar para ambas universidades</em></p>
+        <!-- Slide 7: Semestres 9-10 -->
+        <section class="slide">
+            <h2 class="slide-title">Comparativo Semestres 9 a 10</h2>
+
+            <!-- Semestre 9 -->
+            <div class="semester-comparison">
+                <h3 class="semester-title">Semestre 9</h3>
+                <div class="comparison-grid">
+                    <div class="university-section">
+                        <h4 class="university-title">Universidad del Norte</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Electiva en Filosofía</td><td class="credits">3</td></tr>
+<tr><td>Electiva Profesional II</td><td class="credits">3</td></tr>
+                                <tr><td>Electivas Ciencias de la Computación</td><td class="credits">3</td></tr>
+                                <tr><td>Electivas Gestión Informática</td><td class="credits">3</td></tr>
+                                <tr><td>Electivas Gestión Complementaria I</td><td class="credits">3</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 15 créditos</div>
+                    </div>
+
+                    <div class="university-section upc">
+                        <h4 class="university-title">Universidad Popular del Cesar</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Legislación de Sistemas</td><td class="credits">2</td></tr>
+                                <tr><td>Auditoría de Sistemas</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva Básica de Ingeniería</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva de Profundización II</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva de Profundización III</td><td class="credits">3</td></tr>
+                                <tr><td>Proyecto de Grado I</td><td class="credits">3</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 17 créditos</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semestre 10 -->
+            <div class="semester-comparison">
+                <h3 class="semester-title">Semestre 10</h3>
+                <div class="comparison-grid">
+                    <div class="university-section">
+                        <h4 class="university-title">Universidad del Norte</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Electiva: Estudios Del Caribe</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva Profesional III</td><td class="credits">3</td></tr>
+                                <tr><td>Proyecto Final</td><td class="credits">3</td></tr>
+                                <tr><td>Formación Complementaria Libre II</td><td class="credits">3</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 12 créditos</div>
+                    </div>
+
+                    <div class="university-section upc">
+                        <h4 class="university-title">Universidad Popular del Cesar</h4>
+                        <table class="courses-table">
+                            <thead>
+                                <tr>
+                                    <th>Asignatura</th>
+                                    <th>Créditos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Electiva de Profundización IV</td><td class="credits">3</td></tr>
+                                <tr><td>Electiva de Profundización V</td><td class="credits">3</td></tr>
+                                <tr><td>Ética Profesional</td><td class="credits">2</td></tr>
+                                <tr><td>Proyecto de Grado II</td><td class="credits">8</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="total-credits">Total: 16 créditos</div>
+                    </div>
                 </div>
             </div>
         </section>
-    </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Exposición Comparativa - Ingeniería de Sistemas</p>
-            <p>Elaborado por: Zharay Cabana, Sebastian Freyles, Carina Valera, Jorge Carrillo, Laura Daza</p>
-        </div>
-    </footer>
+        <!-- Slide 8: Perfiles Profesionales -->
+        <section class="slide">
+            <h2 class="slide-title">Perfiles Profesionales</h2>
+
+            <div class="comparison-grid">
+                <div class="university-section">
+                    <h3 class="university-title">Universidad del Norte</h3>
+                    <ul class="profile-list">
+                        <li>Consultor Estratégico en Tecnología de la Información, para brindar servicios de consultoría en tecnología para empresas, diseñando soluciones tecnológicas personalizadas para satisfacer las necesidades del mercado.</li>
+                        <li>Especialista en Investigación y Desarrollo Tecnológico, porque conduciré la investigación avanzada para generar innovación desde la academia o la industria, desarrollando soluciones tecnológicas de vanguardia para problemas globales.</li>
+                        <li>Gerente de Proyectos de Tecnología de la Información, para dirigir proyectos de implementación tecnológica, gestionando equipos interdisciplinarios y garantizando el éxito en la ejecución de soluciones tecnológicas.</li>
+                        <li>Arquitecto y desarrollador de aplicaciones y software, porque diseñaré y desarrollaré aplicaciones y software de alta calidad, utilizando las últimas tecnologías para resolver problemas complejos y mejorar la eficiencia empresarial.</li>
+                        <li>Emprendedor Tecnológico e Innovador, para crear y liderar startups tecnológicos, generando empleo y contribuyendo al crecimiento económico mediante la implementación de soluciones tecnológicas innovadoras.</li>
+                        <li>Investigador y docente universitario, para formar a más profesionales como yo en ingeniería de sistemas y computación.</li>
+                        <li>Arquitecto en Análisis de Datos, para crear soluciones tecnológicas que ayuden en la toma decisiones a partir de toma y procesamiento de datos aplicando algoritmos de aprendizaje de máquina e inteligencia artificial.</li>
+                    </ul>
+                </div>
+
+                <div class="university-section upc">
+                    <h3 class="university-title">Universidad Popular del Cesar</h3>
+                    <ul class="profile-list">
+                        <li>Diseñar y desarrollar software aplicando metodologías de desarrollo actuales.</li>
+                        <li>Analizar, diseñar e implementar sistemas de información para cualquier tipo de organización.</li>
+                        <li>Liderar proyectos de tecnología de información trabajando con equipos multidisciplinarios.</li>
+                        <li>Tener una actitud de investigación sobre problemáticas del contexto para generar soluciones factibles mediante el uso tecnologías de información.</li>
+                    </ul>
+                    <div style="margin-top: 30px; padding: 20px; background: #ecf0f1; border-radius: 10px;">
+                        <p><strong>Descripción General:</strong> El Ingeniero de Sistemas de la Universidad Popular del Cesar, será un profesional capaz de diseñar, implementar, soportar y gestionar soluciones en el campo de las tecnologías informáticas, para satisfacer las necesidades organizacionales y sociales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
