@@ -1,382 +1,96 @@
-/* Reset y configuración base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Arial", sans-serif;
   line-height: 1.6;
-  color: #2c3e50;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #333;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d1810 100%);
   min-height: 100vh;
 }
 
-/* Navegación */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 1rem 0;
-  flex-wrap: wrap;
-}
-
-nav li {
-  margin: 0 1rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: #2c3e50;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  background: #3498db;
-  color: white;
-  transform: translateY(-2px);
-}
-
-/* Contenedor principal */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 20px;
 }
 
-/* Slides */
-.slide {
-  min-height: 100vh;
-  padding: 6rem 0 4rem;
-  display: flex;
-  align-items: center;
-}
-
-.slide:nth-child(even) {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/* Tipografía */
-h1 {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 3rem;
-  color: #2c3e50;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 2.5rem;
-  color: #34495e;
-}
-
-h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: #2c3e50;
-}
-
-h4 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: #34495e;
-}
-
-/* Comparación de universidades */
-.university-comparison {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.university-card {
-  background: white;
-  border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.university-card::before {
-  content: "";
-  position: absolute;
+/* Header */
+.header {
+  background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #3498db, #2ecc71);
+  z-index: 100;
 }
 
-.university-card.upc::before {
-  background: linear-gradient(90deg, #e74c3c, #f39c12);
-}
-
-.university-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-/* Grid de información */
-.info-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.info-item h3 {
-  font-size: 1.1rem;
-  color: #3498db;
-  margin-bottom: 0.5rem;
-}
-
-.info-item p {
-  font-size: 0.95rem;
-  color: #7f8c8d;
-}
-
-/* Listas de cursos */
-.course-list {
-  list-style: none;
-  margin-bottom: 1.5rem;
-}
-
-.course-list li {
+.header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid #ecf0f1;
-  font-size: 0.9rem;
+  flex-wrap: wrap;
 }
 
-.course-list li:last-child {
-  border-bottom: none;
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.credits {
-  background: #3498db;
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  background: rgba(255, 255, 255, 0.2);
   color: white;
-  padding: 0.25rem 0.75rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Main Content */
+.main {
+  padding: 2rem 0;
+  min-height: calc(100vh - 200px);
+}
+
+.section {
+  display: none;
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 15px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  min-width: 40px;
-  text-align: center;
-}
-
-.total-credits {
-  background: #2ecc71;
-  color: white;
-  padding: 0.75rem;
-  border-radius: 10px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-/* Comparación de semestres */
-.semester-comparison {
-  margin-bottom: 4rem;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 15px;
-  backdrop-filter: blur(5px);
-}
-
-.semester-comparison h3 {
-  text-align: center;
-  color: #2c3e50;
   margin-bottom: 2rem;
-  font-size: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s ease-in;
 }
 
-/* Perfiles profesionales */
-.profiles-comparison {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-}
-
-.profile-card {
-  background: white;
-  border-radius: 15px;
-  padding: 2.5rem;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-.profile-intro {
-  font-style: italic;
-  color: #7f8c8d;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-
-.competencies-list {
-  list-style: none;
-}
-
-.competencies-list li {
-  padding: 0.75rem 0;
-  border-left: 3px solid #3498db;
-  padding-left: 1rem;
-  margin-bottom: 0.5rem;
-  background: rgba(52, 152, 219, 0.05);
-  border-radius: 0 8px 8px 0;
-}
-
-.profile-card.upc .competencies-list li {
-  border-left-color: #e74c3c;
-  background: rgba(231, 76, 60, 0.05);
-}
-
-/* Placeholders */
-.placeholder {
-  color: #95a5a6;
-  font-style: italic;
-  background: rgba(149, 165, 166, 0.1);
-  padding: 0.5rem;
-  border-radius: 5px;
-  border-left: 3px solid #95a5a6;
-}
-
-.placeholder-section {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 15px;
-  backdrop-filter: blur(5px);
-}
-
-.placeholder-section .placeholder {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+.section.active {
   display: block;
 }
 
-/* Footer */
-footer {
-  background: #2c3e50;
-  color: white;
-  padding: 3rem 0;
-  text-align: center;
-}
-
-.credits h3 {
-  color: #3498db;
-  margin-bottom: 1rem;
-}
-
-.credits p {
-  font-size: 1.1rem;
-  color: #bdc3c7;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 1rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  .university-comparison,
-  .profiles-comparison {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .info-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav li {
-    margin: 0.25rem 0;
-  }
-
-  .slide {
-    padding: 5rem 0 3rem;
-  }
-
-  .university-card {
-    padding: 1.5rem;
-  }
-
-  .semester-comparison {
-    padding: 1.5rem;
-  }
-
-  .profile-card {
-    padding: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  .university-card,
-  .profile-card {
-    padding: 1rem;
-  }
-
-  .course-list li {
-    font-size: 0.8rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .credits {
-    align-self: flex-end;
-  }
-}
-
-/* Animaciones */
-@keyframes fadeInUp {
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -384,28 +98,618 @@ footer {
   }
 }
 
-.university-card,
-.semester-comparison,
-.profile-card {
-  animation: fadeInUp 0.6s ease-out;
+.section-title {
+  color: #c41e3a;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 3px solid #c41e3a;
+  padding-bottom: 0.5rem;
 }
 
-/* Accesibilidad */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+.section-intro {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.content-card {
+  background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 5px solid #c41e3a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+}
+
+.content-card h3 {
+  color: #c41e3a;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.content-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.content-card li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 20px;
+}
+
+.content-card li:before {
+  content: "★";
+  color: #c41e3a;
+  position: absolute;
+  left: 0;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #c41e3a, #8b0000);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-date {
+  background: #c41e3a;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  min-width: 120px;
+  text-align: center;
+  margin: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-content {
+  flex: 1;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #c41e3a;
+}
+
+.timeline-content h3 {
+  color: #c41e3a;
+  margin-bottom: 0.5rem;
+}
+
+/* Comparison Grid */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.comparison-card {
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.comparison-card:hover {
+  transform: scale(1.02);
+}
+
+.socialism {
+  background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
+  color: white;
+}
+
+.capitalism {
+  background: linear-gradient(135deg, #2c5aa0 0%, #1a365d 100%);
+  color: white;
+}
+
+.comparison-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.feature {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.feature h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Characteristics Grid */
+.characteristics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.characteristic-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #c41e3a;
+  transition: all 0.3s ease;
+}
+
+.characteristic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.characteristic-card h3 {
+  color: #c41e3a;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Countries Grid */
+.countries-grid {
+  display: none;
+}
+
+.countries-accordion {
+  margin-top: 2rem;
+}
+
+.accordion-item {
+  background: white;
+  border: 2px solid #c41e3a;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-header {
+  background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
+  color: white;
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.accordion-header:hover {
+  background: linear-gradient(135deg, #d41e3a 0%, #9b0000 100%);
+}
+
+.accordion-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.accordion-toggle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-toggle {
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 600px;
+}
+
+.country-info {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.country-image {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.country-image img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.country-image:hover img {
+  transform: scale(1.05);
+}
+
+.country-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.country-details p {
+  line-height: 1.6;
+  color: #333;
+}
+
+.country-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+  border-radius: 8px;
+  border-left: 4px solid #c41e3a;
+}
+
+.stat {
+  font-weight: bold;
+  color: #c41e3a;
+  font-size: 0.9rem;
+}
+
+/* VS Comparison */
+.vs-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+  align-items: start;
+}
+
+.vs-column {
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.socialism-col {
+  background: linear-gradient(135deg, #c41e3a 0%, #8b0000 100%);
+  color: white;
+}
+
+.communism-col {
+  background: linear-gradient(135deg, #8b0000 0%, #4a0000 100%);
+  color: white;
+}
+
+.vs-column h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.vs-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.vs-item h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #ffd700;
+}
+
+.vs-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #c41e3a;
+  background: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  align-self: center;
+}
+
+/* Analogy Section */
+.analogy-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+  border-radius: 15px;
+  border: 2px solid #c41e3a;
+}
+
+.analogy-section h3 {
+  color: #c41e3a;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.analogy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.analogy-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #c41e3a;
+}
+
+.analogy-card h4 {
+  color: #c41e3a;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+/* Footer */
+.footer {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Images */
+.section-image {
+  margin: 2rem 0;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.section-image img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.section-image:hover img {
+  transform: scale(1.05);
+}
+
+.card-image {
+  margin: 1rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.timeline-image {
+  margin: 1rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-image img {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: cover;
+}
+
+.comparison-image {
+  margin: 1rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.comparison-image img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: cover;
+}
+
+.characteristic-image {
+  margin: 1rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.characteristic-image img {
+  width: 100%;
+  height: auto;
+  max-height: 120px;
+  object-fit: cover;
+}
+
+.analogy-image {
+  margin: 1.5rem 0;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.analogy-image img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    gap: 1rem;
   }
 
-  html {
-    scroll-behavior: auto;
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .timeline:before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    flex-direction: column !important;
+    padding-left: 40px;
+  }
+
+  .timeline-date {
+    margin: 0 0 1rem 0;
+    align-self: flex-start;
+  }
+
+  .vs-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .vs-divider {
+    justify-self: center;
+    margin: 1rem 0;
+  }
+
+  .content-grid,
+  .characteristics-grid,
+  .countries-grid,
+  .analogy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Responsive for accordion */
+  .country-info {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .accordion-item.active .accordion-content {
+    max-height: 800px;
+  }
+
+  .accordion-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .country-info {
+    padding: 1.5rem;
+  }
+
+  /* Responsive for images */
+  .section-image img,
+  .card-image img,
+  .timeline-image img,
+  .comparison-image img,
+  .characteristic-image img,
+  .analogy-image img,
+  .country-image img {
+    max-height: none;
+    height: auto;
   }
 }
 
-/* Focus states para accesibilidad */
-nav a:focus,
-.university-card:focus {
-  outline: 2px solid #3498db;
-  outline-offset: 2px;
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .section {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
 }
