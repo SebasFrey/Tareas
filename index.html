@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socialismo - Exposición Educativa</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <h1 class="logo">☭ SOCIALISMO</h1>
+            <h1 class="logo">⚒️ SOCIALISMO</h1>
             <nav class="nav">
-                <button class="nav-btn" data-section="definicion">Definición</button>
+                <button class="nav-btn active" data-section="definicion">Definición</button>
                 <button class="nav-btn" data-section="origen">Origen</button>
                 <button class="nav-btn" data-section="produccion">Modo de Producción</button>
                 <button class="nav-btn" data-section="sistema">Sistema Económico</button>
@@ -23,257 +24,408 @@
 
     <main class="main">
         <div class="container">
-            <!-- Sección 1: Definición -->
-            <section id="definicion" class="section active">
-                <h2 class="section-title">Definición y Fundamentos del Socialismo</h2>
-                <!-- Agregando contenido más detallado de la definición -->
-                <div class="section-image">
-                    <img src="/placeholder.svg?height=300&width=600" alt="Trabajadores socialistas unidos" />
+            <!-- Corrigiendo Sección 1: Solo definición y fundamentos básicos -->
+            <section id="definicion" class="section">
+                <h2 class="section-title">1. Definición y Fundamentos del Socialismo</h2>
+                <div class="image-placeholder">
+                    <!-- Replaced span with img tag for socialist symbol -->
+                    <img src="/placeholder.svg" alt="Símbolo socialista - Igualdad y justicia social">
                 </div>
 
-                <div class="intro-text">
-                    <p class="highlight-text">El socialismo es una <strong>teoría política, económica y social</strong> que surge como respuesta directa a las desigualdades generadas por el capitalismo en el siglo XIX.</p>
-                </div>
-
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h3>🏭 Fundamentos Económicos</h3>
-                        <div class="card-image">
-                            <img src="/placeholder.svg?height=200&width=300" alt="Propiedad colectiva" />
-                        </div>
-                        <p><strong>Propiedad colectiva o estatal</strong> de los medios de producción como base fundamental del sistema.</p>
-                        <ul>
-                            <li><strong>Medios de producción:</strong> Fábricas, tierras, recursos naturales, bancos</li>
-                            <li><strong>Objetivo:</strong> Distribuir equitativamente la riqueza</li>
-                            <li><strong>Meta:</strong> Satisfacer las necesidades básicas de toda la sociedad</li>
-                            <li><strong>Eliminación:</strong> De la concentración privada de bienes productivos</li>
-                        </ul>
+                <div class="definition-cards">
+                    <div class="definition-card">
+                        <div class="card-icon">📚</div>
+                        <h3>¿Qué es el Socialismo?</h3>
+                        <p>El socialismo es una <strong>teoría política, económica y social</strong> que surge como respuesta a las desigualdades del capitalismo.</p>
                     </div>
-
-                    <div class="content-card">
-                        <h3>⚖️ Fundamentos Sociales</h3>
-                        <div class="card-image">
-                            <img src="/placeholder.svg?height=200&width=300" alt="Justicia social e igualdad" />
-                        </div>
-                        <p>Nace en el <strong>siglo XIX</strong> para defender específicamente a las <strong>clases trabajadoras</strong> y transformar las relaciones sociales.</p>
-                        <ul>
-                            <li><strong>Defensa:</strong> De las clases trabajadoras explotadas</li>
-                            <li><strong>Promoción:</strong> De la igualdad y cooperación social</li>
-                            <li><strong>Sustitución:</strong> De la competencia individual por la colaboración</li>
-                            <li><strong>Construcción:</strong> De una sociedad más justa y sin clases sociales</li>
-                        </ul>
+                    <div class="definition-card">
+                        <div class="card-icon">🏭</div>
+                        <h3>Propiedad Colectiva</h3>
+                        <p>Consiste en la <strong>propiedad colectiva o estatal</strong> de los medios de producción, con el fin de distribuir equitativamente la riqueza y satisfacer las necesidades básicas de la sociedad.</p>
                     </div>
-
-                    <div class="content-card">
-                        <h3>🎯 Fundamentos Políticos</h3>
-                        <div class="card-image">
-                            <img src="/placeholder.svg?height=200&width=300" alt="Organización política socialista" />
-                        </div>
-                        <p>Como <strong>sistema político y económico</strong>, busca una organización planificada con fuerte intervención estatal.</p>
-                        <ul>
-                            <li><strong>Planificación:</strong> Centralizada de la economía</li>
-                            <li><strong>Intervención estatal:</strong> Para garantizar justicia social</li>
-                            <li><strong>Reducción:</strong> Activa de las desigualdades sociales</li>
-                            <li><strong>Organización:</strong> Democrática o estatal de las decisiones económicas</li>
-                        </ul>
+                    <div class="definition-card">
+                        <div class="card-icon">⚖️</div>
+                        <h3>Justicia Social</h3>
+                        <p>Nace en el siglo XIX para <strong>defender a las clases trabajadoras</strong> y promover la igualdad y la cooperación en lugar de la competencia individual.</p>
+                    </div>
+                    <div class="definition-card">
+                        <div class="card-icon">🏛️</div>
+                        <h3>Organización Planificada</h3>
+                        <p>Como sistema político y económico, busca una <strong>organización planificada</strong> donde el Estado intervenga para garantizar justicia social y reducir las desigualdades.</p>
+                    </div>
+                    <div class="definition-card">
+                        <div class="card-icon">🎯</div>
+                        <h3>Objetivo Final</h3>
+                        <p>Su objetivo es <strong>construir una sociedad más justa y sin clases sociales</strong>.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Sección 2: Origen -->
+            <!-- Corrigiendo Sección 2: Todo el contexto histórico completo -->
             <section id="origen" class="section">
-                <h2 class="section-title">Origen y Contexto Histórico</h2>
-                <div class="section-image">
-                    <img src="/placeholder.svg?height=300&width=600" alt="Revolución Industrial siglo XIX" />
+                <h2 class="section-title">2. Origen y Contexto Histórico</h2>
+                <div class="image-placeholder">
+                    <!-- Replaced span with img tag for Industrial Revolution -->
+                    <img src="/placeholder.svg" alt="Revolución Industrial del siglo XIX - Fábricas y condiciones laborales">
                 </div>
 
-                <div class="intro-text">
-                    <p class="highlight-text">El socialismo nació en <strong>Europa durante el siglo XIX</strong> como respuesta directa a las profundas desigualdades que trajo la Revolución Industrial.</p>
+                <!-- Origen y Propósito -->
+                <div class="origin-purpose-section">
+                    <h2 class="main-title">🎯 Origen y Propósito</h2>
+                    <div class="image-placeholder">
+                        <!-- Replaced span with img tag for Industrial Revolution contrast -->
+                        <img src="/placeholder.svg" alt="Revolución Industrial - Contraste entre burguesía y proletariado">
+                    </div>
+
+                    <div class="origin-context">
+                        <div class="context-box">
+                            <h3 class="subtitle">El Problema que Originó el Socialismo</h3>
+                            <p class="context-text">El socialismo nace como respuesta a un problema real: la <strong>Revolución Industrial (siglos XVIII y XIX)</strong>. En esa época, las fábricas crecían, las máquinas rugían, y la producción se disparaba. Pero mientras la burguesía acumulaba riquezas, la mayoría de los trabajadores (el proletariado) vivía en condiciones durísimas: largas jornadas, bajos salarios, sin derechos laborales.</p>
+                            <p class="context-text">A consecuencia de esto, <strong>a principios del siglo XIX, el concepto socialista nace como respuesta al capitalismo industrial</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="purpose-section">
+                        <h3 class="subtitle">¿Cuál era su Propósito?</h3>
+                        <div class="purpose-grid">
+                            <div class="purpose-item">
+                                <div class="purpose-icon">⚖️</div>
+                                <h4 class="purpose-title">Reducir la desigualdad social</h4>
+                                <p class="purpose-desc">Generada por el capitalismo</p>
+                            </div>
+                            <div class="purpose-item">
+                                <div class="purpose-icon">👷</div>
+                                <h4 class="purpose-title">Defender a los trabajadores</h4>
+                                <p class="purpose-desc">Frente a la explotación en fábricas y minas</p>
+                            </div>
+                            <div class="purpose-item">
+                                <div class="purpose-icon">🏭</div>
+                                <h4 class="purpose-title">Colectivizar los medios de producción</h4>
+                                <p class="purpose-desc">Para que no fueran de unos pocos</p>
+                            </div>
+                            <div class="purpose-item">
+                                <div class="purpose-icon">🤝</div>
+                                <h4 class="purpose-title">Buscar el bienestar común</h4>
+                                <p class="purpose-desc">Por encima de la ganancia individual</p>
+                            </div>
+                            <div class="purpose-item">
+                                <div class="purpose-icon">🏛️</div>
+                                <h4 class="purpose-title">Construir una sociedad justa</h4>
+                                <p class="purpose-desc">Donde las clases no dominen unas sobre otras</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">Siglo XIX</div>
-                        <div class="timeline-content">
-                            <h3>🏭 Revolución Industrial</h3>
-                            <div class="timeline-image">
-                                <img src="/placeholder.svg?height=150&width=250" alt="Condiciones laborales precarias" />
+                <!-- Utópico vs Científico -->
+                <div class="socialism-types">
+                    <h2 class="main-title">📚 Utópico vs Científico</h2>
+                    <div class="comparison-container">
+                        <div class="system-card">
+                            <h4 class="card-title">🌟 Socialismo Utópico</h4>
+                            <div class="image-placeholder">
+                                <!-- Replaced span with img tag for utopian socialists -->
+                                <img src="/placeholder.svg" alt="Socialistas utópicos - Ideales de armonía">
                             </div>
-                            <p><strong>Contexto de explotación:</strong> Los trabajadores vivían en condiciones extremadamente precarias, con jornadas laborales extenuantes y salarios miserables, mientras una minoría concentraba toda la riqueza generada.</p>
-                            <p><strong>Desigualdad extrema:</strong> La industrialización creó una brecha social sin precedentes entre propietarios y trabajadores.</p>
+                            <p class="card-desc"><strong>Ideales de armonía y cooperación</strong>, sin base teórica sólida</p>
+                        </div>
+                        <div class="vs-divider">VS</div>
+                        <div class="system-card">
+                            <h4 class="card-title">🔬 Socialismo Científico</h4>
+                            <div class="image-placeholder">
+                                <!-- Replaced span with img tag for Marx and Engels -->
+                                <img src="/placeholder.svg" alt="Marx y Engels - Análisis científico">
+                            </div>
+                            <p class="card-desc"><strong>Marx y Engels</strong>, análisis histórico basado en la lucha de clases</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1848</div>
-                        <div class="timeline-content">
-                            <h3>📖 Manifiesto Comunista</h3>
-                            <div class="timeline-image">
-                                <img src="/placeholder.svg?height=150&width=250" alt="Marx y Engels" />
+                </div>
+
+                <!-- Pensadores Clave -->
+                <div class="thinkers-section">
+                    <h2 class="main-title">🧠 Pensadores Clave</h2>
+                    <p class="section-intro">Mapa conceptual con los principales pensadores del socialismo</p>
+
+                    <div class="thinkers-grid">
+                        <div class="thinker-card interactive">
+                            <div class="thinker-photo">RO</div>
+                            <div class="thinker-info">
+                                <h3 class="thinker-name">Robert Owen</h3>
+                                <p class="thinker-concept"><strong>Cooperativas</strong></p>
+                                <p class="thinker-desc">Pionero en la creación de comunidades cooperativas autosuficientes</p>
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for Robert Owen -->
+                                    <img src="/placeholder.svg" alt="Robert Owen y sus cooperativas industriales">
+                                </div>
                             </div>
-                            <p><strong>Karl Marx y Friedrich Engels</strong> dan forma teórica a la ideología socialista en el <em>Manifiesto Comunista</em>.</p>
-                            <p><strong>Conceptos clave:</strong> Plantearon la lucha de clases como motor de la historia y la construcción de una sociedad sin explotación.</p>
+                        </div>
+
+                        <div class="thinker-card interactive">
+                            <div class="thinker-photo">CF</div>
+                            <div class="thinker-info">
+                                <h3 class="thinker-name">Charles Fourier</h3>
+                                <p class="thinker-concept"><strong>Falansterios</strong></p>
+                                <p class="thinker-desc">Comunidades autosuficientes y armoniosas basadas en la cooperación</p>
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for Fourier -->
+                                    <img src="/placeholder.svg" alt="Fourier y los falansterios utópicos">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thinker-card interactive">
+                            <div class="thinker-photo">SS</div>
+                            <div class="thinker-info">
+                                <h3 class="thinker-name">Saint-Simon</h3>
+                                <p class="thinker-concept"><strong>Reorganización Social</strong></p>
+                                <p class="thinker-desc">Sociedad dirigida por científicos e industriales para el progreso</p>
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for Saint-Simon -->
+                                    <img src="/placeholder.svg" alt="Saint-Simon y la reorganización social científica">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="thinker-card interactive featured">
+                            <div class="thinker-photo">M&E</div>
+                            <div class="thinker-info">
+                                <h3 class="thinker-name">Marx y Engels</h3>
+                                <p class="thinker-concept"><strong>Socialismo Científico</strong></p>
+                                <p class="thinker-desc">Fundadores del análisis materialista histórico y la lucha de clases</p>
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for Marx and Engels Manifesto -->
+                                    <img src="/placeholder.svg" alt="Marx y Engels - Manifiesto Comunista 1848">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">1917</div>
-                        <div class="timeline-content">
-                            <h3>🚩 Revolución Rusa</h3>
-                            <div class="timeline-image">
-                                <img src="/placeholder.svg?height=150&width=250" alt="Revolución Rusa 1917" />
+                </div>
+
+                <!-- Factores Históricos Clave -->
+                <div class="historical-factors">
+                    <h2 class="main-title">📜 Factores Históricos Clave</h2>
+                    <div class="timeline-container">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span class="roman-numeral">XVII-XVIII</span>
+                                    <span class="century-label">Siglos XVII-XVIII</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">💡 La Ilustración</h3>
+                                    <div class="image-placeholder">
+                                        <!-- Replaced span with img tag for Enlightenment thinkers -->
+                                        <img src="/placeholder.svg" alt="Pensadores ilustrados - Razón y progreso">
+                                    </div>
+                                    <p class="timeline-desc"><strong>Movimiento intelectual</strong> que promovía la razón, la libertad, la igualdad y el progreso.</p>
+                                    <p class="timeline-impact"><strong>Influencia socialista:</strong> Estas ideas influyeron en los pensadores socialistas para imaginar una sociedad más justa, sin privilegios heredados ni desigualdades arbitrarias.</p>
+                                </div>
                             </div>
-                            <p><strong>Liderada por Lenin:</strong> El socialismo dejó de ser solo una idea teórica y se convirtió en un sistema de gobierno real.</p>
-                            <p><strong>Expansión mundial:</strong> Se extendió por gran parte del mundo durante el siglo XX, influenciando movimientos políticos globales.</p>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span class="roman-numeral">XVIII</span>
+                                    <span class="century-label">Siglo XVIII - 1789</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">🇫🇷 Revolución Francesa</h3>
+                                    <div class="image-placeholder">
+                                        <!-- Replaced span with img tag for French Revolution -->
+                                        <img src="/placeholder.svg" alt="Revolución Francesa - Libertad, Igualdad, Fraternidad">
+                                    </div>
+                                    <p class="timeline-desc"><strong>Gritó al mundo</strong> los ideales de libertad, igualdad y fraternidad.</p>
+                                    <p class="timeline-impact"><strong>Aunque en la práctica</strong> benefició más a la burguesía que al pueblo, dejó sembrada la idea de que el orden social podía ser cambiado por acción política.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span class="roman-numeral">XVIII-XIX</span>
+                                    <span class="century-label">Siglos XVIII-XIX</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">🏭 Revolución Industrial</h3>
+                                    <div class="image-placeholder">
+                                        <!-- Replaced span with img tag for industrial factories -->
+                                        <img src="/placeholder.svg" alt="Fábricas industriales - Máquinas y obreros">
+                                    </div>
+                                    <p class="timeline-desc"><strong>Transformó la forma de producir:</strong> fábricas, máquinas y producción en masa.</p>
+                                    <p class="timeline-impact"><strong>Desigualdad extrema:</strong> Esto trajo riqueza para los dueños, pero condiciones miserables para los obreros (jornadas de 14 horas, bajos salarios, trabajo infantil).</p>
+                                    <p class="timeline-impact"><strong>Escenario de contraste:</strong> Fue el escenario donde se vio claramente la desigualdad entre burguesía y proletariado.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span class="roman-numeral">XIX</span>
+                                    <span class="century-label">Siglo XIX</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">💰 Auge del Capitalismo</h3>
+                                    <div class="image-placeholder">
+                                        <!-- Replaced span with img tag for capitalist bourgeoisie -->
+                                        <img src="/placeholder.svg" alt="Burguesía capitalista - Acumulación de riqueza">
+                                    </div>
+                                    <p class="timeline-desc"><strong>El capitalismo industrial</strong> generó grandes fortunas y consolidó a la burguesía como clase dominante.</p>
+                                    <p class="timeline-impact"><strong>Al mismo tiempo,</strong> millones de campesinos se convirtieron en obreros sin propiedad ni derechos, creando una nueva clase social: el proletariado.</p>
+                                    <p class="timeline-impact"><strong>Esta contradicción</strong> entre riqueza y pobreza fue la chispa para que surgieran ideas de cambio.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span class="roman-numeral">XIX</span>
+                                    <span class="century-label">Siglo XIX</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">✊ Movimientos Obreros</h3>
+                                    <div class="image-placeholder">
+                                        <!-- Replaced span with img tag for strikes and unions -->
+                                        <img src="/placeholder.svg" alt="Huelgas y sindicatos - Organización obrera">
+                                    </div>
+                                    <p class="timeline-desc"><strong>A medida que los trabajadores se organizaban</strong> (huelgas, sindicatos, asociaciones), empezaron a exigir mejores condiciones.</p>
+                                    <p class="timeline-impact"><strong>Estos movimientos</strong> fueron el músculo social que dio fuerza al pensamiento socialista, que actuaba como cerebro y guía.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Sección 3: Modo de Producción -->
+            <!-- Sección 3: Comparación visual interactiva mejorada -->
+            <!-- Actualizando sección 3 con contenido completo sobre modo de producción -->
             <section id="produccion" class="section">
                 <h2 class="section-title">El Socialismo como Modo de Producción</h2>
-                <!-- Expandiendo significativamente el contenido del modo de producción -->
-                <div class="section-image">
-                    <img src="/placeholder.svg?height=300&width=600" alt="Producción socialista planificada" />
+                <div class="image-placeholder">
+                    <!-- Replaced span with img tag for production modes comparison -->
+                    <img src="/placeholder.svg" alt="Modo de producción socialista vs capitalista">
                 </div>
 
-                <div class="intro-text">
-                    <p class="highlight-text">El socialismo representa una de las <strong>principales alternativas al capitalismo</strong>, transformando completamente las relaciones económicas, sociales y políticas de la sociedad.</p>
+                <div class="section-intro">
+                    El socialismo, como modo de producción, representa una de las <strong>principales alternativas al capitalismo</strong> que han surgido en la historia moderna. Este sistema busca transformar las relaciones económicas, sociales y políticas, proponiendo una organización diferente de la producción, distribución y propiedad de los recursos y bienes.
                 </div>
 
-                <div class="production-principles">
-                    <h3>🏗️ Organización Económica Socialista</h3>
-                    <div class="principles-grid">
-                        <div class="principle-card">
-                            <h4>🏭 Propiedad Colectiva/Estatal</h4>
-                            <div class="principle-image">
-                                <img src="/placeholder.svg?height=120&width=200" alt="Propiedad colectiva" />
-                            </div>
-                            <p>Los recursos y medios de producción <strong>pertenecen a toda la sociedad o al Estado</strong>, eliminando completamente la concentración privada de bienes productivos.</p>
-                            <ul>
-                                <li>Fábricas, tierras y recursos naturales son patrimonio común</li>
-                                <li>Eliminación de la propiedad privada de medios productivos</li>
-                                <li>Control democrático o estatal de los recursos</li>
-                            </ul>
-                        </div>
+                <div class="economic-organization">
+                    <h3>🏗️ Cómo Concibe la Organización Económica</h3>
+                    <div class="image-placeholder">
+                        <!-- Replaced span with img tag for central planning -->
+                        <img src="/placeholder.svg" alt="Planificación centralizada socialista">
+                    </div>
+                    <p>En el socialismo, la organización económica se fundamenta en la <strong>propiedad colectiva o estatal de los medios de producción</strong>. La <strong>planificación centralizada reemplaza al mercado</strong> como principal mecanismo de coordinación, buscando satisfacer las necesidades de toda la población y no solo la generación de beneficios privados.</p>
+                    <p>Las decisiones económicas, desde la producción hasta la distribución, son tomadas de <strong>manera democrática o estatal</strong>, con el objetivo de garantizar igualdad social, acceso equitativo a los recursos y una distribución justa de la riqueza.</p>
+                </div>
 
-                        <div class="principle-card">
-                            <h4>👷 Trabajo Orientado al Bien Común</h4>
-                            <div class="principle-image">
-                                <img src="/placeholder.svg?height=120&width=200" alt="Trabajo colectivo" />
-                            </div>
-                            <p>El trabajo se entiende como una <strong>actividad orientada al beneficio común</strong>, donde cada persona aporta según sus capacidades y recibe según sus necesidades.</p>
-                            <ul>
-                                <li>Contribución según capacidades individuales</li>
-                                <li>Recepción según necesidades reales</li>
-                                <li>Eliminación de la explotación laboral</li>
-                            </ul>
+                <div class="principles-grid">
+                    <div class="principle-item">
+                        <h4>🏭 La Propiedad Colectiva/Estatal</h4>
+                        <div class="image-placeholder">
+                            <!-- Replaced span with img tag for collective factory -->
+                            <img src="/placeholder.svg" alt="Fábrica de propiedad colectiva">
                         </div>
+                        <p><strong>La propiedad colectiva o estatal</strong> implica que los recursos y medios de producción pertenecen a toda la sociedad o al Estado, eliminando la concentración privada de bienes.</p>
+                        <ul>
+                            <li>Recursos y medios productivos son patrimonio común</li>
+                            <li>Eliminación de la concentración privada</li>
+                            <li>Control social de los bienes estratégicos</li>
+                        </ul>
+                    </div>
 
-                        <div class="principle-card">
-                            <h4>💰 Distribución Equitativa</h4>
-                            <div class="principle-image">
-                                <img src="/placeholder.svg?height=120&width=200" alt="Distribución equitativa" />
-                            </div>
-                            <p>La riqueza se distribuye de <strong>manera equitativa</strong>, garantizando que todos los miembros accedan a bienes y servicios esenciales para una vida digna.</p>
-                            <ul>
-                                <li>Reducción activa de desigualdades</li>
-                                <li>Acceso universal a servicios básicos</li>
-                                <li>Garantía de vida digna para todos</li>
-                            </ul>
+                    <div class="principle-item">
+                        <h4>👷 El Trabajo Orientado al Bien Común</h4>
+                        <div class="image-placeholder">
+                            <!-- Replaced span with img tag for workers collaboration -->
+                            <img src="/placeholder.svg" alt="Trabajadores colaborando por el bien común">
                         </div>
+                        <p><strong>El trabajo</strong> se entiende como una actividad orientada al beneficio común, donde cada persona aporta según sus capacidades y recibe según sus necesidades.</p>
+                        <ul>
+                            <li>Contribución según capacidades individuales</li>
+                            <li>Recepción según necesidades reales</li>
+                            <li>Eliminación de la explotación laboral</li>
+                        </ul>
+                    </div>
 
-                        <div class="principle-card">
-                            <h4>📊 Planificación Centralizada</h4>
-                            <div class="principle-image">
-                                <img src="/placeholder.svg?height=120&width=200" alt="Planificación centralizada" />
-                            </div>
-                            <p>La <strong>planificación centralizada reemplaza al mercado</strong> como principal mecanismo de coordinación, priorizando necesidades sociales sobre beneficios privados.</p>
-                            <ul>
-                                <li>Decisiones económicas democráticas o estatales</li>
-                                <li>Satisfacción de necesidades poblacionales</li>
-                                <li>Coordinación consciente de la producción</li>
-                            </ul>
+                    <div class="principle-item">
+                        <h4>💰 La Distribución Equitativa</h4>
+                        <div class="image-placeholder">
+                            <!-- Replaced span with img tag for resource distribution -->
+                            <img src="/placeholder.svg" alt="Distribución equitativa de recursos">
                         </div>
+                        <p><strong>La distribución</strong> de la riqueza se realiza de manera equitativa, buscando reducir desigualdades y garantizar que todos los miembros de la sociedad accedan a los bienes y servicios esenciales para una vida digna.</p>
+                        <ul>
+                            <li>Reducción activa de desigualdades</li>
+                            <li>Acceso universal a servicios básicos</li>
+                            <li>Garantía de vida digna para todos</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="comparison-section">
-                    <h3>⚔️ Diferencias Fundamentales con el Capitalismo</h3>
-                    <div class="comparison-grid">
-                        <div class="comparison-card socialism">
-                            <h3>🔴 SOCIALISMO</h3>
-                            <div class="comparison-image">
-                                <img src="/placeholder.svg?height=180&width=280" alt="Fábrica socialista" />
+                    <h3>⚔️ Diferencias Frente al Modo de Producción Capitalista</h3>
+                    <div class="comparison-container">
+                        <div class="system-card capitalism">
+                            <h4>💰 CAPITALISMO</h4>
+                            <div class="image-placeholder">
+                                <!-- Replaced span with img tag for capitalist system -->
+                                <img src="/placeholder.svg" alt="Sistema capitalista - propiedad privada">
                             </div>
-                            <div class="feature">
-                                <h4>🏭 Propiedad</h4>
-                                <p><strong>Colectiva o estatal</strong> de medios de producción</p>
-                            </div>
-                            <div class="feature">
-                                <h4>🎯 Objetivo</h4>
-                                <p><strong>Bienestar común</strong> y satisfacción de necesidades sociales</p>
-                            </div>
-                            <div class="feature">
-                                <h4>📊 Coordinación</h4>
-                                <p><strong>Planificación centralizada</strong> y democrática</p>
-                            </div>
-                            <div class="feature">
-                                <h4>⚖️ Resultado</h4>
-                                <p><strong>Equidad social</strong> y reducción de brechas</p>
-                            </div>
+                            <ul>
+                                <li><strong>Propiedad privada</strong> de medios de producción</li>
+                                <li><strong>Búsqueda de beneficios</strong> individuales</li>
+                                <li><strong>Mercado libre</strong> regula producción y distribución</li>
+                                <li><strong>Competencia y lucro</strong> como motores</li>
+                                <li><strong>Genera desigualdades</strong> sociales</li>
+                            </ul>
                         </div>
-
-                        <div class="comparison-card capitalism">
-                            <h3>💰 CAPITALISMO</h3>
-                            <div class="comparison-image">
-                                <img src="/placeholder.svg?height=180&width=280" alt="Fábrica capitalista" />
+                        <div class="vs-divider">VS</div>
+                        <div class="system-card socialism">
+                            <h4>🔴 SOCIALISMO</h4>
+                            <div class="image-placeholder">
+                                <!-- Replaced span with img tag for socialist system -->
+                                <img src="/placeholder.svg" alt="Sistema socialista - propiedad colectiva">
                             </div>
-                            <div class="feature">
-                                <h4>🏭 Propiedad</h4>
-                                <p><strong>Privada</strong> de medios de producción</p>
-                            </div>
-                            <div class="feature">
-                                <h4>🎯 Objetivo</h4>
-                                <p><strong>Beneficios individuales</strong> y acumulación de capital</p>
-                            </div>
-                            <div class="feature">
-                                <h4>📊 Coordinación</h4>
-                                <p><strong>Mercado libre</strong> basado en competencia</p>
-                            </div>
-                            <div class="feature">
-                                <h4>⚖️ Resultado</h4>
-                                <p><strong>Desigualdades sociales</strong> y concentración de riqueza</p>
-                            </div>
+                            <ul>
+                                <li><strong>Propiedad colectiva</strong> o estatal</li>
+                                <li><strong>Organización orientada</strong> al bienestar común</li>
+                                <li><strong>Planificación centralizada</strong> y democrática</li>
+                                <li><strong>Equidad e igualdad</strong> de oportunidades</li>
+                                <li><strong>Reduce brechas</strong> sociales y económicas</li>
+                            </ul>
                         </div>
                     </div>
+                    <p class="comparison-summary">A diferencia del capitalismo, donde predomina la propiedad privada de los medios de producción y la búsqueda de beneficios individuales, el socialismo plantea la propiedad colectiva o estatal y la organización orientada al bienestar común. En el capitalismo, el mercado regula la producción y distribución basándose en la competencia y el lucro, lo que suele generar desigualdades sociales. En cambio, el socialismo apuesta por una planificación centralizada y democrática, priorizando la equidad, la igualdad de oportunidades y el acceso universal a los recursos básicos, con el objetivo de reducir las brechas sociales y económicas entre las personas.</p>
                 </div>
             </section>
 
             <!-- Sección 4: Sistema Económico -->
+            <!-- Sección 4: Sistema de características con animaciones -->
             <section id="sistema" class="section">
                 <h2 class="section-title">El Socialismo como Sistema Económico y Político</h2>
-                <!-- Expandiendo las características del sistema con más detalle -->
-                <div class="section-image">
-                    <img src="/placeholder.svg?height=300&width=600" alt="Sistema económico socialista" />
+                <div class="image-placeholder">
+                    <!-- Replaced span with img tag for integral socialist system -->
+                    <img src="/placeholder.svg" alt="Sistema económico socialista integral">
                 </div>
 
-                <div class="intro-text">
-                    <p class="highlight-text">El socialismo es un <strong>sistema económico, político y social integral</strong> que busca la igualdad y el bienestar colectivo, en contraposición directa al capitalismo.</p>
+                <div class="section-intro">
+                    El socialismo es un <strong>sistema económico, político y social integral</strong> que busca la igualdad y el bienestar colectivo, en contraposición directa al capitalismo.
                 </div>
 
-                <div class="system-overview">
-                    <div class="overview-card">
-                        <h3>🎯 Base Fundamental</h3>
-                        <p>Los <strong>medios de producción</strong> (fábricas, tierras, recursos, bancos) pertenecen al <strong>Estado o a la colectividad</strong>, y la economía se organiza de forma completamente planificada.</p>
+                <div class="system-base">
+                    <h3>🎯 Base Fundamental</h3>
+                    <div class="image-placeholder">
+                        <!-- Replaced span with img tag for state-controlled production -->
+                        <img src="/placeholder.svg" alt="Medios de producción bajo control estatal">
                     </div>
+                    <p>Los <strong>medios de producción</strong> (fábricas, tierras, recursos, bancos) pertenecen al <strong>Estado o a la colectividad</strong>, y la economía se organiza de forma completamente planificada.</p>
                 </div>
 
-                <div class="characteristics-grid">
+                <div class="characteristics-showcase">
                     <div class="characteristic-card">
-                        <div class="icon">🏛️</div>
+                        <div class="characteristic-number">1</div>
                         <h3>Propiedad Social o Estatal</h3>
-                        <div class="characteristic-image">
-                            <img src="/placeholder.svg?height=120&width=200" alt="Propiedad estatal" />
+                        <div class="image-placeholder">
+                            <!-- Replaced span with img tag for state property -->
+                            <img src="/placeholder.svg" alt="Propiedad estatal de recursos">
                         </div>
                         <p><strong>Los recursos y medios de producción no son privados</strong>, sino que pertenecen completamente al Estado o a la comunidad organizada.</p>
                         <ul>
@@ -284,10 +436,11 @@
                     </div>
 
                     <div class="characteristic-card">
-                        <div class="icon">📊</div>
+                        <div class="characteristic-number">2</div>
                         <h3>Planificación Centralizada</h3>
-                        <div class="characteristic-image">
-                            <img src="/placeholder.svg?height=120&width=200" alt="Planificación centralizada" />
+                        <div class="image-placeholder">
+                            <!-- Replaced span with img tag for economic planning center -->
+                            <img src="/placeholder.svg" alt="Centro de planificación económica">
                         </div>
                         <p><strong>El Estado organiza completamente</strong> qué se produce, en qué cantidades y cómo se distribuye en la sociedad.</p>
                         <ul>
@@ -298,10 +451,11 @@
                     </div>
 
                     <div class="characteristic-card">
-                        <div class="icon">⚖️</div>
+                        <div class="characteristic-number">3</div>
                         <h3>Igualdad Social</h3>
-                        <div class="characteristic-image">
-                            <img src="/placeholder.svg?height=120&width=200" alt="Igualdad social" />
+                        <div class="image-placeholder">
+                            <!-- Replaced span with img tag for egalitarian society -->
+                            <img src="/placeholder.svg" alt="Sociedad igualitaria socialista">
                         </div>
                         <p><strong>Busca activamente reducir</strong> las diferencias de riqueza y garantizar servicios básicos universales para todos los ciudadanos.</p>
                         <ul>
@@ -312,10 +466,11 @@
                     </div>
 
                     <div class="characteristic-card">
-                        <div class="icon">🤝</div>
+                        <div class="characteristic-number">4</div>
                         <h3>Trabajo Colectivo</h3>
-                        <div class="characteristic-image">
-                            <img src="/placeholder.svg?height=120&width=200" alt="Trabajo colectivo" />
+                        <div class="image-placeholder">
+                            <!-- Replaced span with img tag for collaborative work -->
+                            <img src="/placeholder.svg" alt="Trabajo colaborativo socialista">
                         </div>
                         <p><strong>El esfuerzo laboral está orientado</strong> exclusivamente al beneficio común de la sociedad, no al lucro individual o privado.</p>
                         <ul>
@@ -326,10 +481,11 @@
                     </div>
 
                     <div class="characteristic-card">
-                        <div class="icon">🎯</div>
+                        <div class="characteristic-number">5</div>
                         <h3>Distribución Equitativa</h3>
-                        <div class="characteristic-image">
-                            <img src="/placeholder.svg?height=120&width=200" alt="Distribución equitativa" />
+                        <div class="image-placeholder">
+                            <!-- Replaced span with img tag for universal public services -->
+                            <img src="/placeholder.svg" alt="Servicios públicos universales">
                         </div>
                         <p><strong>Se procura activamente</strong> que todos tengan acceso garantizado a salud, educación, vivienda y empleo digno.</p>
                         <ul>
@@ -339,33 +495,51 @@
                             <li>Empleo como derecho social</li>
                         </ul>
                     </div>
+                </div>
 
-                    <div class="characteristic-card">
-                        <div class="icon">📚</div>
-                        <h3>Pensador Clave: Karl Marx</h3>
-                        <div class="characteristic-image">
-                            <img src="/placeholder.svg?height=120&width=200" alt="Karl Marx" />
+                <div class="marx-section">
+                    <h3>📚 Pensador Clave: Karl Marx</h3>
+                    <div class="image-placeholder">
+                        <!-- Replaced span with img tag for Karl Marx -->
+                        <img src="/placeholder.svg" alt="Karl Marx - Filósofo del socialismo">
+                    </div>
+                    <p><strong>Karl Marx</strong> es el pensador más importante del socialismo, crítico feroz de la propiedad privada y defensor de la economía centralizada y planificada.</p>
+                    <div class="principles-grid">
+                        <div class="principle-item">
+                            <h4>❌ Crítica a la Propiedad Privada</h4>
+                            <p>No estaba de acuerdo con la propiedad privada de los medios de producción</p>
                         </div>
-                        <p><strong>Karl Marx</strong> es el pensador más importante del socialismo, crítico feroz de la propiedad privada y defensor de la economía centralizada y planificada.</p>
-                        <ul>
-                            <li>Crítica sistemática al capitalismo</li>
-                            <li>Teoría de la lucha de clases</li>
-                            <li>Defensa de la planificación económica</li>
-                        </ul>
+                        <div class="principle-item">
+                            <h4>📊 Economía Centralizada y Planificada</h4>
+                            <p>Defendía un sistema económico completamente planificado por el Estado</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- Sección 5: Países -->
+            <!-- Manteniendo sección 5 de países con acordeón ya implementado -->
             <section id="paises" class="section">
                 <h2 class="section-title">Países Socialistas</h2>
-                <!-- Agregando imagen principal de la sección -->
-                <div class="section-image">
-                    <img src="/placeholder.svg?height=300&width=600" alt="Países socialistas del mundo" />
+                <div class="image-placeholder">
+                    <!-- Replaced span with img tag for world map -->
+                    <img src="/placeholder.svg" alt="Mapa mundial de países socialistas actuales">
                 </div>
-                <p class="section-intro">Solo cinco países se declaran oficialmente socialistas en la actualidad:</p>
 
-                <!-- Reemplazando grid de países con acordeón interactivo -->
+                <div class="section-intro">
+                    Los países socialistas son aquellos que organizan su sistema político, económico y social bajo la ideología del socialismo. Esto significa que la riqueza, los recursos y los medios de producción, como las fábricas, tierras y bancos, son en su mayoría <strong>propiedad colectiva o estatal</strong>. El objetivo es garantizar mayor igualdad entre los ciudadanos y cubrir derechos básicos como salud, educación, vivienda y empleo.
+                </div>
+
+                <div class="definition-section">
+                    <h3>📋 Definición</h3>
+                    <p>Un <strong>Estado socialista (o república socialista)</strong> es aquel que se declara constitucionalmente dedicado a la construcción del socialismo. En lugar de que el mercado libre decida cómo funciona la economía, es el Estado quien planifica y organiza la producción, distribución y consumo de los bienes.</p>
+                </div>
+
+                <div class="current-countries">
+                    <h3>🌍 Países Socialistas en la Actualidad</h3>
+                    <p>En la actualidad <strong>solo cinco países se declaran oficialmente socialistas</strong>. Estos son: China, Vietnam, Laos, Cuba y Corea del Norte. Todos llegaron al socialismo tras revoluciones o guerras, y aunque comparten la base ideológica del marxismo-leninismo, cada uno ha seguido un camino diferente.</p>
+                </div>
+
                 <div class="countries-accordion">
                     <div class="accordion-item active" data-country="china">
                         <div class="accordion-header">
@@ -375,12 +549,15 @@
                         <div class="accordion-content">
                             <div class="country-info">
                                 <div class="country-image">
-                                    <img src="/placeholder.svg?height=250&width=400" alt="China socialista moderna" />
+                                    <div class="image-placeholder">
+                                        <!-- Replaced span with img tag for modern China -->
+                                        <img src="..//ambiental/img/china.jpg" alt="China socialista moderna - Desarrollo económico">
+                                    </div>
                                 </div>
                                 <div class="country-details">
-                                    <p><strong>Desde 1949</strong> - Gobernada por el Partido Comunista de China</p>
-                                    <p><strong>"Socialismo con características chinas"</strong> - El Estado mantiene control sobre sectores estratégicos como energía y banca, pero permite empresas privadas y extranjeras.</p>
-                                    <p>Gracias a este modelo, China se convirtió en una de las mayores potencias mundiales.</p>
+                                    <p><strong>Desde 1949</strong> es gobernada por el Partido Comunista de China.</p>
+                                    <p><strong>Su sistema se conoce como "socialismo con características chinas"</strong>, donde el Estado mantiene control sobre sectores estratégicos como energía y banca, pero al mismo tiempo permite empresas privadas y extranjeras.</p>
+                                    <p><strong>Gracias a este modelo</strong>, China se convirtió en una de las mayores potencias mundiales.</p>
                                     <div class="country-stats">
                                         <span class="stat">Población: 1.4 mil millones</span>
                                         <span class="stat">PIB: $17.7 billones</span>
@@ -399,12 +576,15 @@
                         <div class="accordion-content">
                             <div class="country-info">
                                 <div class="country-image">
-                                    <img src="/placeholder.svg?height=250&width=400" alt="Vietnam socialista" />
+                                    <div class="image-placeholder">
+                                        <!-- Replaced span with img tag for Vietnam -->
+                                        <img src="/placeholder.svg" alt="Vietnam socialista - Reformas Đổi Mới">
+                                    </div>
                                 </div>
                                 <div class="country-details">
-                                    <p><strong>Desde 1976</strong> - Tras la reunificación, el Partido Comunista adoptó el socialismo</p>
-                                    <p><strong>Reformas "Đổi Mới" (1986)</strong> - Abrieron su economía al mercado, manteniendo la planificación estatal.</p>
-                                    <p>Hoy es una de las economías emergentes más dinámicas de Asia, con una notable reducción de la pobreza.</p>
+                                    <p><strong>Tras la reunificación en 1976</strong>, el Partido Comunista adoptó el socialismo.</p>
+                                    <p><strong>En 1986 aplicó reformas llamadas "Đổi Mới"</strong>, que abrieron su economía al mercado, manteniendo la planificación estatal.</p>
+                                    <p><strong>Hoy es una de las economías emergentes más dinámicas de Asia</strong>, con una notable reducción de la pobreza.</p>
                                     <div class="country-stats">
                                         <span class="stat">Población: 97 millones</span>
                                         <span class="stat">PIB: $408 mil millones</span>
@@ -423,12 +603,15 @@
                         <div class="accordion-content">
                             <div class="country-info">
                                 <div class="country-image">
-                                    <img src="/placeholder.svg?height=250&width=400" alt="Laos socialista" />
+                                    <div class="image-placeholder">
+                                        <!-- Replaced span with img tag for Laos -->
+                                        <img src="/placeholder.svg" alt="Laos socialista - Proyectos hidroeléctricos">
+                                    </div>
                                 </div>
                                 <div class="country-details">
-                                    <p><strong>Desde 1975</strong> - Gobernado por el Partido Popular Revolucionario Lao</p>
-                                    <p>Aunque se define como socialista, permite inversión privada en algunos sectores, pero mantiene la tierra como propiedad del Estado.</p>
-                                    <p>Es un país de bajos ingresos que depende de ayuda internacional y proyectos hidroeléctricos.</p>
+                                    <p><strong>Gobernado desde 1975</strong> por el Partido Popular Revolucionario Lao.</p>
+                                    <p><strong>Aunque se define como socialista</strong>, permite inversión privada en algunos sectores, pero mantiene la tierra como propiedad del Estado.</p>
+                                    <p><strong>Es un país de bajos ingresos</strong> que depende de ayuda internacional y proyectos hidroeléctricos.</p>
                                     <div class="country-stats">
                                         <span class="stat">Población: 7.3 millones</span>
                                         <span class="stat">PIB: $19 mil millones</span>
@@ -447,12 +630,15 @@
                         <div class="accordion-content">
                             <div class="country-info">
                                 <div class="country-image">
-                                    <img src="/placeholder.svg?height=250&width=400" alt="Cuba socialista" />
+                                    <div class="image-placeholder">
+                                        <!-- Replaced span with img tag for Cuba -->
+                                        <img src="/placeholder.svg" alt="Cuba socialista - Revolución de 1959">
+                                    </div>
                                 </div>
                                 <div class="country-details">
-                                    <p><strong>Desde 1959</strong> - Tras la revolución liderada por Fidel Castro</p>
-                                    <p>El Estado controla gran parte de la economía, aunque en los últimos años se han permitido pequeños negocios privados.</p>
-                                    <p>A pesar del embargo económico de Estados Unidos, Cuba mantiene logros sociales destacados en salud y educación gratuitas.</p>
+                                    <p><strong>Tras la revolución de 1959</strong> liderada por Fidel Castro, adoptó el socialismo.</p>
+                                    <p><strong>El Estado controla gran parte de la economía</strong>, aunque en los últimos años se han permitido pequeños negocios privados.</p>
+                                    <p><strong>A pesar del embargo económico de Estados Unidos</strong>, Cuba mantiene logros sociales destacados en salud y educación gratuitas, aunque enfrenta serias dificultades económicas.</p>
                                     <div class="country-stats">
                                         <span class="stat">Población: 11.3 millones</span>
                                         <span class="stat">PIB: $107 mil millones</span>
@@ -471,12 +657,15 @@
                         <div class="accordion-content">
                             <div class="country-info">
                                 <div class="country-image">
-                                    <img src="/placeholder.svg?height=250&width=400" alt="Corea del Norte socialista" />
+                                    <div class="image-placeholder">
+                                        <!-- Replaced span with img tag for North Korea -->
+                                        <img src="/placeholder.svg" alt="Corea del Norte - Ideología Juche">
+                                    </div>
                                 </div>
                                 <div class="country-details">
-                                    <p><strong>Desde 1948</strong> - Fundada bajo la ideología Juche, que promueve la autosuficiencia nacional</p>
-                                    <p>El Partido del Trabajo controla de manera centralizada la economía y la sociedad.</p>
-                                    <p>Es un país aislado, con fuerte desarrollo militar y grandes limitaciones económicas.</p>
+                                    <p><strong>Fundada en 1948</strong> bajo la ideología Juche, que promueve la autosuficiencia nacional.</p>
+                                    <p><strong>El Partido del Trabajo</strong> controla de manera centralizada la economía y la sociedad.</p>
+                                    <p><strong>Es un país aislado</strong>, con fuerte desarrollo militar y grandes limitaciones económicas.</p>
                                     <div class="country-stats">
                                         <span class="stat">Población: 25.8 millones</span>
                                         <span class="stat">PIB: $32 mil millones (estimado)</span>
@@ -490,283 +679,377 @@
             </section>
 
             <!-- Sección 6: Comparación -->
+            <!-- Sección 6: Comparación detallada con todas las analogías -->
             <section id="comparacion" class="section">
                 <h2 class="section-title">Socialismo vs. Comunismo: ¿Son lo mismo?</h2>
-                <!-- Expandiendo significativamente la comparación con todo el contenido detallado -->
-                <div class="section-image">
-                    <img src="/placeholder.svg?height=300&width=600" alt="Comparación socialismo vs comunismo" />
+                <div class="image-placeholder">
+                    <!-- Replaced span with img tag for socialism vs communism comparison -->
+                    <img src="/placeholder.svg" alt="Comparación visual socialismo vs comunismo">
                 </div>
 
-                <div class="intro-text">
-                    <p class="highlight-text">Aunque a menudo se usan como sinónimos, <strong>socialismo y comunismo son sistemas distintos</strong> que, pese a compartir orígenes y críticas al capitalismo, tienen objetivos, métodos y estructuras fundamentalmente diferentes.</p>
+                <div class="section-intro">
+                    Aunque a menudo se usan como sinónimos, <strong>socialismo y comunismo son sistemas distintos</strong> que, pese a compartir orígenes y críticas al capitalismo, tienen objetivos, métodos y estructuras fundamentalmente diferentes.
                 </div>
 
                 <div class="shared-dna">
-                    <h3>🧬 El "ADN" Compartido</h3>
-                    <div class="dna-content">
-                        <div class="dna-image">
-                            <img src="/placeholder.svg?height=200&width=400" alt="Origen común Marx Engels" />
+                    <h3>🧬 El "ADN" Compartido: ¿Qué los Une?</h3>
+                    <div class="image-placeholder">
+                        <!-- Replaced span with img tag for Marx and Engels common origin -->
+                        <img src="/placeholder.svg" alt="Marx y Engels - Origen común del socialismo y comunismo">
+                    </div>
+                    <p><strong>Ambos nacen como respuesta</strong> a las profundas desigualdades y explotación de la clase trabajadora durante el capitalismo industrial del siglo XIX.</p>
+                    <div class="fundamentals-grid">
+                        <div class="fundamental-card">
+                            <div class="fundamental-icon">⚔️</div>
+                            <h4>Crítica Común</h4>
+                            <p>Al capitalismo y sus desigualdades estructurales</p>
                         </div>
-                        <div class="dna-text">
-                            <p><strong>Ambos nacen como respuesta</strong> a las profundas desigualdades y explotación de la clase trabajadora durante el capitalismo industrial del siglo XIX.</p>
-                            <ul>
-                                <li><strong>Crítica común:</strong> Al capitalismo y sus desigualdades</li>
-                                <li><strong>Objetivo compartido:</strong> Acabar con la explotación laboral</li>
-                                <li><strong>Base teórica:</strong> Karl Marx y Friedrich Engels</li>
-                                <li><strong>Fundamento:</strong> Análisis de la lucha de clases</li>
-                            </ul>
+                        <div class="fundamental-card">
+                            <div class="fundamental-icon">🎯</div>
+                            <h4>Objetivo Compartido</h4>
+                            <p>Acabar con la explotación laboral y la injusticia social</p>
+                        </div>
+                        <div class="fundamental-card">
+                            <div class="fundamental-icon">📚</div>
+                            <h4>Base Teórica</h4>
+                            <p>Karl Marx y Friedrich Engels como fundadores</p>
+                        </div>
+                        <div class="fundamental-card">
+                            <div class="fundamental-icon">⚖️</div>
+                            <h4>Fundamento</h4>
+                            <p>Análisis de la lucha de clases como motor histórico</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="key-differences">
-                    <h3>🔍 Las Diferencias Esenciales</h3>
+                    <h3>🔍 Las Diferencias Esenciales: Distintos Caminos y Metas</h3>
 
                     <div class="difference-section">
                         <h4>🎯 Objetivos Finales y Etapas</h4>
-                        <div class="vs-container">
-                            <div class="vs-column socialism-col">
-                                <h5>🔴 SOCIALISMO</h5>
-                                <div class="vs-content">
-                                    <p><strong>Etapa intermedia o de transición</strong> entre el capitalismo y el comunismo.</p>
-                                    <p>Su meta es <strong>regular la lucha de clases</strong> y reducir significativamente las desigualdades sociales.</p>
-                                    <p><em>"Una puerta intermedia hacia la equidad"</em></p>
+                        <div class="comparison-grid">
+                            <div class="ideology-column socialism">
+                                <h5 class="ideology-title">🔴 SOCIALISMO</h5>
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for socialist transition -->
+                                    <img src="/placeholder.svg" alt="Etapa de transición socialista">
                                 </div>
+                                <p><strong>Etapa intermedia o de transición</strong> entre el capitalismo y el comunismo.</p>
+                                <p>Su meta es <strong>regular la lucha de clases</strong> y reducir significativamente las desigualdades sociales.</p>
+                                <p><em>"Una puerta intermedia hacia la equidad"</em></p>
                             </div>
                             <div class="vs-divider">VS</div>
-                            <div class="vs-column communism-col">
-                                <h5>🟥 COMUNISMO</h5>
-                                <div class="vs-content">
-                                    <p><strong>Fase final y utópica</strong> de la sociedad ideal.</p>
-                                    <p>Busca la <strong>eliminación total</strong> de las clases sociales, la propiedad privada y, eventualmente, la abolición del Estado mismo.</p>
-                                    <p><em>"El paraíso sin Estado ni clases"</em></p>
+                            <div class="ideology-column communism">
+                                <h5 class="ideology-title">🟥 COMUNISMO</h5>
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for communist utopia -->
+                                    <img src="/placeholder.svg" alt="Sociedad comunista utópica">
                                 </div>
+                                <p><strong>Fase final y utópica</strong> de la sociedad ideal.</p>
+                                <p>Busca la <strong>eliminación total</strong> de las clases sociales, la propiedad privada y, eventualmente, la abolición del Estado mismo.</p>
+                                <p><em>"El paraíso sin Estado ni clases"</em></p>
                             </div>
                         </div>
                     </div>
 
                     <div class="difference-section">
                         <h4>🏭 Propiedad de los Medios de Producción</h4>
-                        <div class="vs-container">
-                            <div class="vs-column socialism-col">
-                                <h5>🔴 SOCIALISMO</h5>
-                                <div class="vs-content">
-                                    <p><strong>Propiedad social o colectiva</strong> de los medios de producción estratégicos (fábricas, grandes tierras).</p>
-                                    <p><strong>Permite y respeta</strong> la propiedad privada en otros sectores, conviviendo con el libre mercado regulado por el Estado.</p>
+                        <div class="comparison-grid">
+                            <div class="ideology-column socialism">
+                                <h5 class="ideology-title">🔴 SOCIALISMO</h5>
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for mixed socialist property -->
+                                    <img src="/placeholder.svg" alt="Propiedad mixta socialista">
                                 </div>
+                                <p><strong>Propiedad social o colectiva</strong> de los medios de producción estratégicos (fábricas, grandes tierras).</p>
+                                <p><strong>Permite y respeta</strong> la propiedad privada en otros sectores, conviviendo con el libre mercado regulado por el Estado.</p>
                             </div>
                             <div class="vs-divider">VS</div>
-                            <div class="vs-column communism-col">
-                                <h5>🟥 COMUNISMO</h5>
-                                <div class="vs-content">
-                                    <p><strong>Abolición total</strong> de la propiedad privada, tanto de medios de producción como de bienes de consumo.</p>
-                                    <p><strong>Todo sería propiedad comunitaria</strong>, administrada inicialmente por el Estado central, para luego pasar a ser de toda la sociedad.</p>
+                            <div class="ideology-column communism">
+                                <h5 class="ideology-title">🟥 COMUNISMO</h5>
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for community property -->
+                                    <img src="/placeholder.svg" alt="Propiedad totalmente comunitaria">
                                 </div>
+                                <p><strong>Abolición total</strong> de la propiedad privada, tanto de medios de producción como de bienes de consumo.</p>
+                                <p><strong>Todo sería propiedad comunitaria</strong>, administrada inicialmente por el Estado central, para luego pasar a ser de toda la sociedad.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="difference-section">
                         <h4>🏛️ Papel del Estado</h4>
-                        <div class="vs-container">
-                            <div class="vs-column socialism-col">
-                                <h5>🔴 SOCIALISMO</h5>
-                                <div class="vs-content">
-                                    <p><strong>El Estado es regulador y planificador clave.</strong> Interviene en economía y sociedad para corregir desequilibrios.</p>
-                                    <p>Garantiza servicios básicos (salud, educación) y asegura distribución equitativa de la riqueza.</p>
-                                    <p><strong>En socialdemocracias:</strong> Dentro de marco democrático.</p>
+                        <div class="comparison-grid">
+                            <div class="ideology-column socialism">
+                                <h5 class="ideology-title">🔴 SOCIALISMO</h5>
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for socialist regulatory state -->
+                                    <img src="/placeholder.svg" alt="Estado regulador socialista">
                                 </div>
+                                <p><strong>El Estado es regulador y planificador clave.</strong> Interviene en economía y sociedad para corregir desequilibrios.</p>
+                                <p>Garantiza servicios básicos (salud, educación) y asegura distribución equitativa de la riqueza.</p>
+                                <p><strong>En socialdemocracias:</strong> Dentro de marco democrático.</p>
                             </div>
                             <div class="vs-divider">VS</div>
-                            <div class="vs-column communism-col">
-                                <h5>🟥 COMUNISMO</h5>
-                                <div class="vs-content">
-                                    <p><strong>Estado con control total y absoluto</strong> de todos los medios de producción y vida política, a través de partido único.</p>
-                                    <p>La idea es que, una vez alcanzada la sociedad sin clases, <strong>el Estado "se extinguirá paulatinamente"</strong>.</p>
-                                    <p><strong>En la práctica:</strong> Ha derivado en regímenes de partido único y dictaduras.</p>
+                            <div class="ideology-column communism">
+                                <h5 class="ideology-title">🟥 COMUNISMO</h5>
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for totalitarian communist state -->
+                                    <img src="/placeholder.svg" alt="Estado totalitario comunista">
                                 </div>
+                                <p><strong>Estado con control total y absoluto</strong> de todos los medios de producción y vida política, a través de partido único.</p>
+                                <p>La idea es que, una vez alcanzada la sociedad sin clases, <strong>el Estado "se extinguirá paulatinamente"</strong>.</p>
+                                <p><strong>En la práctica:</strong> Ha derivado en regímenes de partido único y dictaduras.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="difference-section">
-                        <h4>💰 Distribución de la Riqueza</h4>
-                        <div class="vs-container">
-                            <div class="vs-column socialism-col">
-                                <h5>🔴 SOCIALISMO</h5>
-                                <div class="vs-content">
-                                    <p><strong>"De cada cual según sus capacidades, a cada cual según su esfuerzo"</strong></p>
-                                    <p>Las diferencias salariales se reducen drásticamente comparado con el capitalismo, pero <strong>se mantiene cierto nivel de desigualdad como incentivo</strong>.</p>
+                        <h4>💰 Distribución de la Riqueza e Incentivos</h4>
+                        <div class="comparison-grid">
+                            <div class="ideology-column socialism">
+                                <h5 class="ideology-title">🔴 SOCIALISMO</h5>
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for distribution by effort -->
+                                    <img src="/placeholder.svg" alt="Distribución según esfuerzo">
                                 </div>
+                                <p><strong>"De cada cual según sus capacidades, a cada cual según su esfuerzo"</strong></p>
+                                <p>Las diferencias salariales se reducen drásticamente comparado con el capitalismo, pero <strong>se mantiene cierto nivel de desigualdad como incentivo</strong>.</p>
                             </div>
                             <div class="vs-divider">VS</div>
-                            <div class="vs-column communism-col">
-                                <h5>🟥 COMUNISMO</h5>
-                                <div class="vs-content">
-                                    <p><strong>"De cada cual según sus capacidades, a cada cual según sus necesidades"</strong></p>
-                                    <p>Una vez alcanzada alta capacidad productiva, <strong>los bienes se distribuirían universalmente sin importar el esfuerzo individual</strong>, ya que las necesidades básicas estarían cubiertas.</p>
+                            <div class="ideology-column communism">
+                                <h5 class="ideology-title">🟥 COMUNISMO</h5>
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for distribution by needs -->
+                                    <img src="/placeholder.svg" alt="Distribución según necesidades">
                                 </div>
+                                <p><strong>"De cada cual según sus capacidades, a cada cual según sus necesidades"</strong></p>
+                                <p>Una vez alcanzada alta capacidad productiva, <strong>los bienes se distribuirían universalmente sin importar el esfuerzo individual</strong>, ya que las necesidades básicas estarían cubiertas.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="difference-section">
                         <h4>🗳️ Sistema Político y Democracia</h4>
-                        <div class="vs-container">
-                            <div class="vs-column socialism-col">
-                                <h5>🔴 SOCIALISMO</h5>
-                                <div class="vs-content">
-                                    <p><strong>Ideología más flexible.</strong> Las corrientes socialdemócratas defienden la democracia parlamentaria, el pluralismo político y la participación ciudadana.</p>
-                                    <p><strong>Permite coexistencia</strong> de diferentes partidos y expresiones políticas (voto, referéndums).</p>
+                        <div class="comparison-grid">
+                            <div class="ideology-column socialism">
+                                <h5 class="ideology-title">🔴 SOCIALISMO</h5>
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for socialist democracy -->
+                                    <img src="/placeholder.svg" alt="Democracia socialista pluralista">
                                 </div>
+                                <p><strong>Ideología más flexible.</strong> Las corrientes socialdemócratas defienden la democracia parlamentaria, el pluralismo político y la participación ciudadana.</p>
+                                <p><strong>Permite coexistencia</strong> de diferentes partidos y expresiones políticas (voto, referéndums).</p>
                             </div>
                             <div class="vs-divider">VS</div>
-                            <div class="vs-column communism-col">
-                                <h5>🟥 COMUNISMO</h5>
-                                <div class="vs-content">
-                                    <p><strong>En la práctica se ha asociado</strong> con regímenes de partido único y dictaduras.</p>
-                                    <p>El poder político está <strong>fuertemente centralizado</strong> y se restringe la participación ciudadana y la disidencia.</p>
+                            <div class="ideology-column communism">
+                                <h5 class="ideology-title">🟥 COMUNISMO</h5>
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for single communist party -->
+                                    <img src="/placeholder.svg" alt="Partido único comunista">
                                 </div>
+                                <p><strong>En la práctica se ha asociado</strong> con regímenes de partido único y dictaduras.</p>
+                                <p>El poder político está <strong>fuertemente centralizado</strong> y se restringe la participación ciudadana y la disidencia.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="analogies-section">
-                    <h3>🚌 Analogías Prácticas</h3>
+                    <h3>🚌 Analogías Prácticas Colombianas</h3>
 
-                    <div class="analogy-container">
-                        <h4>Transporte Público (TransMilenio en Colombia)</h4>
+                    <div class="analogy-section">
+                        <h4 class="analogy-title">🚌 Transporte Público (TransMilenio)</h4>
                         <div class="analogy-grid">
-                            <div class="analogy-card capitalism-analogy">
-                                <h5>💰 Capitalismo</h5>
-                                <div class="analogy-image">
-                                    <img src="/placeholder.svg?height=120&width=180" alt="Buses privados" />
+                            <div class="analogy-card">
+                                <h5> 💰 Capitalismo</h5>
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for private buses -->
+                                    <img src="/placeholder.svg" alt="Buses privados compitiendo">
                                 </div>
                                 <p>Cada empresa de bus es dueña de sus vehículos y <strong>compite por pasajeros</strong> en las rutas más rentables. El costo del pasaje y servicio varían, algunas zonas quedan mal cubiertas si no son rentables.</p>
                             </div>
 
-                            <div class="analogy-card socialism-analogy">
+                            <div class="analogy-card">
                                 <h5>🔴 Socialismo</h5>
-                                <div class="analogy-image">
-                                    <img src="/placeholder.svg?height=120&width=180" alt="Transporte regulado" />
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for TransMilenio -->
+                                    <img src="/placeholder.svg" alt="TransMilenio regulado por el Estado">
                                 </div>
                                 <p>El Estado interviene y regula el sistema. <strong>Tarifas accesibles para todos</strong>, subsidios para estudiantes y adultos mayores, cobertura en todas las zonas. Los buses pueden ser estatales o cooperativas.</p>
                             </div>
 
-                            <div class="analogy-card communism-analogy">
-                                <h5>🟥 Comunismo</h5>
-                                <div class="analogy-image">
-                                    <img src="/placeholder.svg?height=120&width=180" alt="Buses comunitarios" />
+                            <div class="analogy-card">
+                                <h5> 🟥 Comunismo</h5>
+                                <div class="image-placeholder">
+                                    <!-- Replaced span with img tag for community transport -->
+                                    <img src="/placeholder.svg" alt="Transporte comunitario gratuito">
                                 </div>
                                 <p><strong>No hay empresas de buses.</strong> Los buses son de la comunidad. No se paga pasaje. Si necesitas transporte, simplemente te subes, sin pensar en "ganancia" o "costo".</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="analogy-container">
-                        <h4>Campo Colombiano (Fincas y Campesinos)</h4>
+                    <div class="analogy-section">
+                        <h4 class="analogy-title">🌾 Campo Colombiano (Fincas y Campesinos)</h4>
                         <div class="analogy-grid">
-                            <div class="analogy-card capitalism-analogy">
-                                <h5>💰 Capitalismo</h5>
-                                <div class="analogy-image">
-                                    <img src="/placeholder.svg?height=120&width=180" alt="Finca privada" />
+                            <div class="analogy-card">
+                                <h5> 💰 Capitalismo</h5>
+                                <div class="image-placeholder">
+                                    <span>Imagen: Finca cafetera privada</span>
                                 </div>
                                 <p>Un gran <strong>terrateniente es dueño</strong> de extensa finca cafetera. Los campesinos son empleados que trabajan por salario. El terrateniente busca maximizar producción y ganancias.</p>
                             </div>
 
-                            <div class="analogy-card socialism-analogy">
+                            <div class="analogy-card">
                                 <h5>🔴 Socialismo</h5>
-                                <div class="analogy-image">
-                                    <img src="/placeholder.svg?height=120&width=180" alt="Cooperativa agrícola" />
+                                <div class="image-placeholder">
+                                    <span>Imagen: Cooperativa agrícola con apoyo del SENA</span>
                                 </div>
                                 <p>La finca se convierte en <strong>cooperativa agrícola.</strong> Los campesinos la trabajan juntos, comparten beneficios, deciden colectivamente qué sembrar. Apoyo técnico del SENA.</p>
                             </div>
 
-                            <div class="analogy-card communism-analogy">
-                                <h5>🟥 Comunismo</h5>
-                                <div class="analogy-image">
-                                    <img src="/placeholder.svg?height=120&width=180" alt="Tierra comunitaria" />
+                            <div class="analogy-card">
+                                <h5> 🟥 Comunismo</h5>
+                                <div class="image-placeholder">
+                                    <span>Imagen: Tierra comunitaria sin propietarios</span>
                                 </div>
                                 <p><strong>La finca no tiene dueño.</strong> Tierra y herramientas son de toda la comunidad. Los campesinos trabajan según capacidades, la cosecha se distribuye según necesidades. Sin dinero ni salarios.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="analogy-container">
-                        <h4>Educación (Universidades y SENA)</h4>
+                    <div class="analogy-section">
+                        <h4 class="analogy-title">🎓 Educación (Universidades y SENA)</h4>
                         <div class="analogy-grid">
-                            <div class="analogy-card capitalism-analogy">
-                                <h5>💰 Capitalismo</h5>
-                                <div class="analogy-image">
-                                    <img src="/placeholder.svg?height=120&width=180" alt="Universidades mixtas" />
+                            <div class="analogy-card">
+                                <h5> 💰 Capitalismo</h5>
+                                <div class="image-placeholder">
+                                    <span>Imagen: Universidades públicas y privadas</span>
                                 </div>
                                 <p>Coexisten universidades públicas (Nacional, Antioquia) y privadas (Javeriana, Los Andes) que <strong>cobran matrículas elevadas</strong>. El Estado regula pero no controla totalmente.</p>
                             </div>
 
-                            <div class="analogy-card socialism-analogy">
+                            <div class="analogy-card">
                                 <h5>🔴 Socialismo</h5>
-                                <div class="analogy-image">
-                                    <img src="/placeholder.svg?height=120&width=180" alt="Educación pública fortalecida" />
+                                <div class="image-placeholder">
+                                    <span>Imagen: Educación pública fortalecida</span>
                                 </div>
                                 <p><strong>Universidades públicas gratuitas y de alta calidad.</strong> SENA con presupuesto robusto. Pueden coexistir privadas pero con fuerte regulación estatal y becas universales.</p>
                             </div>
 
-                            <div class="analogy-card communism-analogy">
-                                <h5>🟥 Comunismo</h5>
-                                <div class="analogy-image">
-                                    <img src="/placeholder.svg?height=120&width=180" alt="Educación totalmente pública" />
+                            <div class="analogy-card">
+                                <h5> 🟥 Comunismo</h5>
+                                <div class="image-placeholder">
+                                    <span>Imagen: Educación totalmente pública</span>
                                 </div>
                                 <p><strong>Todas las universidades son públicas y gratuitas.</strong> No existe educación privada. Acceso basado en capacidad y necesidad. El Estado planifica la oferta académica.</p>
                             </div>
                         </div>
                     </div>
+
+                    <div class="analogy-section">
+                        <h4 class="analogy-title">💰 Subsidios (Familias en Acción, Ingreso Solidario)</h4>
+                        <div class="analogy-grid">
+                            <div class="analogy-card">
+                                <h5> 💰 Capitalismo (con Estado de Bienestar)</h5>
+                                <div class="image-placeholder">
+                                    <span>Imagen: Subsidios focalizados</span>
+                                </div>
+                                <p>Los subsidios existen como parches para corregir fallas del mercado y aliviar la pobreza. Son una "ayuda" para los que no logran satisfacer sus necesidades por sí mismos, con requisitos específicos.</p>
+                            </div>
+
+                            <div class="analogy-card">
+                                <h5>🔴 Socialismo</h5>
+                                <div class="image-placeholder">
+                                    <span>Imagen: Subsidios estructurales universales</span>
+                                </div>
+                                <p>Los subsidios serían un <strong>componente estructural</strong> de la economía, mucho más amplios y garantizados. No son "ayuda" temporal, sino parte de un sistema que asegura un mínimo vital.</p>
+                            </div>
+
+                            <div class="analogy-card">
+                                <h5> 🟥 Comunismo</h5>
+                                <div class="image-placeholder">
+                                    <span>Imagen: Bienes gratuitos universales</span>
+                                </div>
+                                <p>El concepto de "subsidio" sería obsoleto. Como todo se produciría y distribuiría según la necesidad, no habría por qué "subsidiar" algo. <strong>Alimento, vivienda, ropa y servicios básicos disponibles gratuitamente.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="systems-comparison">
+                    <h3>📊 Comparación con Otros Sistemas</h3>
+                    <div class="fundamentals-grid">
+                        <div class="fundamental-card">
+                            <div class="fundamental-icon">⛓️</div>
+                            <h4>Esclavismo</h4>
+                            <div class="image-placeholder">
+                                <span>Imagen: Sistema esclavista</span>
+                            </div>
+                            <p>La propiedad de las personas y medios de producción es absoluta, y la fuerza de trabajo es gratuita. No hay derechos ni para las personas ni para su producción.</p>
+                        </div>
+
+                        <div class="fundamental-card">
+                            <div class="fundamental-icon">🏰</div>
+                            <h4>Feudalismo</h4>
+                            <div class="image-placeholder">
+                                <span>Imagen: Sistema feudal</span>
+                            </div>
+                            <p>La tierra es el principal medio de producción, controlada por señores feudales. Los siervos están atados a la tierra y deben pagar tributos. La noción de igualdad es inexistente.</p>
+                        </div>
+
+                        <div class="fundamental-card">
+                            <div class="fundamental-icon">💰</div>
+                            <h4>Capitalismo</h4>
+                            <div class="image-placeholder">
+                                <span>Imagen: Sistema capitalista</span>
+                            </div>
+                            <p>La propiedad privada de medios de producción es la norma. Las decisiones se rigen por oferta y demanda, buscando el lucro. Puede generar gran desigualdad y explotación.</p>
+                        </div>
+                    </div>
+                    <p><strong>Frente a esto,</strong> el socialismo y el comunismo son intentos de superar esas lógicas de dominación y explotación, buscando llevar la ciudadanía a su máxima expresión, eliminando las limitaciones impuestas por las desigualdades económicas y de clase.</p>
                 </div>
 
                 <div class="examples-section">
-                    <h3>🌍 Ejemplos Actuales e Históricos</h3>
-                    <div class="examples-grid">
-                        <div class="example-card socialism-examples">
-                            <h4>🔴 Socialismo (con matices socialdemócratas)</h4>
-                            <div class="example-image">
-                                <img src="/placeholder.svg?height=150&width=250" alt="Países nórdicos" />
+                    <h3>🌍 Ejemplos Prácticos Actuales e Históricos</h3>
+                    <div class="comparison-grid">
+                        <div class="ideology-column socialism">
+                            <h4 class="ideology-title">🔴 Socialismo (con matices socialdemócratas)</h4>
+                            <div class="image-placeholder">
+                                <span>Imagen: Países nórdicos y socialismo del siglo XXI</span>
                             </div>
                             <ul>
                                 <li><strong>Países nórdicos:</strong> Noruega, Dinamarca, Suecia implementan políticas socialistas (sistemas robustos de bienestar, educación y salud universal) dentro de economía de mercado y democracia liberal.</li>
-                                <li><strong>Socialismo del Siglo XXI:</strong> Venezuela, Ecuador, Bolivia han buscado rol más protagónico del Estado, aceptando propiedad privada pero priorizando redistribución.</li>
+                                <li><strong>Socialismo del Siglo XXI:</strong> Venezuela, Ecuador, Bolivia han buscado rol más protagónico del Estado, aceptando propiedad privada pero priorizando redistribución y programas sociales.</li>
                             </ul>
                         </div>
-
-                        <div class="example-card communism-examples">
-                            <h4>🟥 Comunismo (o regímenes que se autodenominan así)</h4>
-                            <div class="example-image">
-                                <img src="/placeholder.svg?height=150&width=250" alt="Estados comunistas" />
+                        <div class="vs-divider">VS</div>
+                        <div class="ideology-column communism">
+                            <h4 class="ideology-title">🟥 Comunismo (o regímenes que se autodenominan así)</h4>
+                            <div class="image-placeholder">
+                                <span>Imagen: Estados comunistas históricos y actuales</span>
                             </div>
                             <ul>
-                                <li><strong>Histórico:</strong> La Unión Soviética (URSS) fue el ejemplo más prominente.</li>
+                                <li><strong>Histórico:</strong> La Unión Soviética (URSS) fue el ejemplo más prominente del intento de implementación comunista.</li>
                                 <li><strong>Actuales:</strong> China, Cuba, Corea del Norte, Laos y Vietnam se declaran estados socialistas o comunistas.</li>
-                                <li><strong>Realidad:</strong> La mayoría, como China y Vietnam, han incorporado importantes reformas de libre mercado, alejándose de la teoría comunista pura.</li>
+                                <li><strong>Realidad:</strong> La mayoría, como China y Vietnam, han incorporado importantes reformas de libre mercado, alejándose de la teoría comunista pura. Cuba también ha hecho ajustes para permitir cierta propiedad privada.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="conclusion-section">
-                    <h3>📝 Resumen de Diferencias Clave</h3>
-                    <div class="conclusion-content">
-                        <p class="highlight-text">Mientras el <strong>socialismo busca reformar el sistema capitalista</strong> para reducir la desigualdad a través de la intervención estatal y la propiedad colectiva de sectores clave, manteniendo cierta propiedad privada y democracia, el <strong>comunismo aspira a una transformación radical</strong> para eliminar por completo la propiedad privada, las clases sociales y el Estado, buscando una igualdad absoluta.</p>
-                        <p>Son <strong>dos visiones distintas</strong> de cómo alcanzar la equidad, con experiencias históricas que han tomado caminos muy diferentes en la práctica.</p>
+                    <h3>📝 Resumen Final</h3>
+                    <div class="image-placeholder">
+                        <span>Imagen: Síntesis comparativa socialismo vs comunismo</span>
                     </div>
+                    <p class="section-intro">Mientras el <strong>socialismo busca reformar el sistema capitalista</strong> para reducir la desigualdad a través de la intervención estatal y la propiedad colectiva de sectores clave, manteniendo cierta propiedad privada y democracia, el <strong>comunismo aspira a una transformación radical</strong> para eliminar por completo la propiedad privada, las clases sociales y el Estado, buscando una igualdad absoluta.</p>
+                    <p>Son <strong>dos visiones distintas</strong> de cómo alcanzar la equidad, con experiencias históricas que han tomado caminos muy diferentes en la práctica.</p>
                 </div>
             </section>
         </div>
     </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 - Exposición Educativa sobre Socialismo</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
